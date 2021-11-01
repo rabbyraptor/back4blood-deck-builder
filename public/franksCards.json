@@ -1,0 +1,2324 @@
+[
+  {
+    "type": "Offense",
+    "title": "Admin Reload",
+    "image": "/images/Admin Reload.png",
+    "effects": [
+      {
+        "type": "When you stow your weapon, it reloads."
+      },
+      {
+        "type": "Ammo Capacity",
+        "amount": -15,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Adrenaline Fueled",
+    "image": "/images/Adrenaline Fueled.png",
+    "effects": [
+      {
+        "type": "Stamina",
+        "amount": 100,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Stamina Regeneration",
+        "amount": -75,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "When you kill an enemy, gain 10 Stamina Instantly and an additional 10 Stamina over 5 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Ammo Belt",
+    "image": "/images/Ammo Belt.png",
+    "effects": [
+      {
+        "type": "Ammo Capacity",
+        "amount": 50,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Stamina Efficiency",
+        "amount": -20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Ammo For All",
+    "image": "/images/Ammo For All.png",
+    "effects": [
+      {
+        "type": "Team Ammo Capacity",
+        "amount": 10,
+        "isPercentage": true
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Ammo Mule",
+    "image": "/images/Ammo Mule.png",
+    "effects": [
+      {
+        "type": "Ammo Capacity",
+        "amount": 75,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "DISABLES: Support Accessories"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Ammo Pouch",
+    "image": "/images/Ammo Pouch.png",
+    "effects": [
+      {
+        "type": "Ammo Capacity",
+        "amount": 25,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Ammo Scavenger",
+    "image": "/images/Ammo Scavenger.png",
+    "effects": [
+      {
+        "type": "You can sense Nearby Ammo"
+      },
+      {
+        "type": "More ammo spawns"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Ammo Stash",
+    "image": "/images/Ammo Stash.png",
+    "effects": [
+      {
+        "type": "Your secondary weapons have Unlimited Ammo"
+      },
+      {
+        "type": "Secondary weapon reload speed",
+        "amount": -20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Amped Up",
+    "image": "/images/Amped Up.png",
+    "effects": [
+      {
+        "type": "When you exit a starting saferoom, your team gains 50 Temporary Health"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Antibiotic Ointment",
+    "image": "/images/Antibiotic Ointment.png",
+    "effects": [
+      {
+        "type": "Healing Efficiency",
+        "amount": 20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Avenge the Fallen",
+    "image": "/images/Avenge the Fallen.png",
+    "effects": [
+      {
+        "type": "When you or a teammate becomes incapacitated, all teammates gain 30% Damage, 20% Reload Speed, and Unlimited Ammo for 10 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Batter Up",
+    "image": "/images/Batter Up.png",
+    "effects": [
+      {
+        "type": "Melee Damage",
+        "amount": 50,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Health",
+        "amount": 5,
+        "isPercentage": false,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Battle Lust",
+    "image": "/images/Battle Lust.png",
+    "effects": [
+      {
+        "type": "Melee Kills Heal",
+        "amount": 2,
+        "isPercentage": false,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Berserker",
+    "image": "/images/Berserker.png",
+    "effects": [
+      {
+        "type": "Gain 10% Melee Damage. 10% Melee Speed, and 5% Move Speed for each Melee kill in the last 4 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Body Armor",
+    "image": "/images/Body Armor.png",
+    "effects": [
+      {
+        "type": "Trauma Resistance",
+        "amount": 25,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Ammo Capacity",
+        "amount": -25,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Bomb Squad",
+    "image": "/images/Bomb Squad.png",
+    "effects": [
+      {
+        "type": "Explosive Damage",
+        "amount": 100,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Explosive Resistance",
+        "amount": 35,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Bounty Hunter",
+    "image": "/images/Bounty Hunter.png",
+    "effects": [
+      {
+        "type": "When you kill a Mutation, gain 10 Copper (Up to 300 per Level)"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Box O' Bags",
+    "image": "/images/Box O' Bags.png",
+    "effects": [
+      {
+        "type": "Health",
+        "amount": -10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Team Support Inventory",
+        "amount": 1,
+        "isPercentage": false
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Breakout",
+    "image": "/images/Breakout.png",
+    "effects": [
+      {
+        "type": "Breakout: Hold [E/SQUARE/X] to free yourself from Grabs. +50% Breakout Cooldown Reduction (Base 60 seconds)"
+      }
+    ]
+  },
+  {
+    "type": "Offense ",
+    "title": "Broadside",
+    "image": "/images/Broadside.png",
+    "effects": [
+      {
+        "type": "Precision Kills have a 20% chance to cause Ridden to explode, dealing 15 damage to other Ridden with 4 meters"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Buckshot Bruiser",
+    "image": "/images/Buckshot Bruiser.png",
+    "effects": [
+      {
+        "type": "When using Shotguns, gain Temporary Health for each pellet that hits"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Canned Goods",
+    "image": "/images/Canned Goods.png",
+    "effects": [
+      {
+        "type": "Health",
+        "amount": 40,
+        "isPercentage": false,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Stamina",
+        "amount": -30,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Charitable Soul",
+    "image": "/images/Charitable Soul.png",
+    "effects": [
+      {
+        "type": "Healing a teammate also applies 50% of the effect to you"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Chemical Courage",
+    "image": "/images/Chemical Courage.png",
+    "effects": [
+      {
+        "type": "Pain meds you apply also grant +25% Damage for 60 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Cocky",
+    "image": "/images/Cocky.png",
+    "effects": [
+      {
+        "type": "Weapo Swap Speed",
+        "amount": 75,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "When you take Damage your Accuracy is reduced by 20% for 3 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Cold Brew Coffee",
+    "image": "/images/Cold Brew Coffee.png",
+    "effects": [
+      {
+        "type": "Stamina Regeneration",
+        "amount": 40,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Stamina Efficiency",
+        "amount": -10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Combat Knife",
+    "image": "/images/Combat Knife.png",
+    "effects": [
+      {
+        "type": "Turns your Bash into a Knife that counts as a Melee weapon"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Combat Medic",
+    "image": "/images/Combat Medic.png",
+    "effects": [
+      {
+        "type": "Use Speed",
+        "amount": 50,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Heals teammates for an additional 20 when you revive them"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Combat Training",
+    "image": "/images/Combat Training.png",
+    "effects": [
+      {
+        "type": "Bullet Damage",
+        "amount": 5,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Bullet Penetration",
+        "amount": 50,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Compound Interest",
+    "image": "/images/Compound Interest.png",
+    "effects": [
+      {
+        "type": "Gain 10% of your total Copper in each Saferoom"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Confident Killer",
+    "image": "/images/Confident Killer.png",
+    "effects": [
+      {
+        "type": "When you or your team kills a mutation gain 1% damage (up to 15%) until the end of the level"
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Controlled Movement",
+    "image": "/images/Controlled Movement.png",
+    "effects": [
+      {
+        "type": "+40% Movement Speed while aiming down sights with Sniper Rifles"
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Copper Scavenger",
+    "image": "/images/Copper Scavenger.png",
+    "effects": [
+      {
+        "type": "You can sense Nearby Copper, More copper piles spawn"
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Cross Trainers",
+    "image": "/images/Cross Trainers.png",
+    "effects": [
+      {
+        "type": "Stamina",
+        "amount": 20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Stamina Regeneration",
+        "amount": 20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Move Speed",
+        "amount": 3,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Health",
+        "amount": 5,
+        "isPercentage": false,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Dash",
+    "image": "/images/Dash.png",
+    "effects": [
+      {
+        "type": "Move Speed",
+        "amount": 5,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Demolitions Expert",
+    "image": "/images/Demolitions Expert.png",
+    "effects": [
+      {
+        "type": "Accessory Damage",
+        "amount": 50,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Ammo Capacity",
+        "amount": -15,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Double Grenade Pouch",
+    "image": "/images/Double Grenade Pouch.png",
+    "effects": [
+      {
+        "type": "Offensive Inventory",
+        "amount": 2,
+        "isPercentage": false,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage Dealt",
+        "amount": -10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Down in Front!",
+    "image": "/images/Down in Front!.png",
+    "effects": [
+      {
+        "type": "While Crouching you neither take nor deal Friendly Fire damage"
+      },
+      {
+        "type": "Health",
+        "amount": 10,
+        "isPercentage": false,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "EMT Bag",
+    "image": "/images/EMT Bag.png",
+    "effects": [
+      {
+        "type": "Healing Efficiency",
+        "amount": 40,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Stamina Recovery",
+        "amount": -20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Energy Bar",
+    "image": "/images/Energy Bar.png",
+    "effects": [
+      {
+        "type": "Stamina Regeneration",
+        "amount": 20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Health",
+        "amount": 5,
+        "isPercentage": false,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Energy Drink",
+    "image": "/images/Energy Drink.png",
+    "effects": [
+      {
+        "type": "Stamina",
+        "amount": 40,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage Resistance",
+        "amount": -5,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Evasive Action",
+    "image": "/images/Evasive Action.png",
+    "effects": [
+      {
+        "type": "When you take a hit for 10 or more damage. Gain 20% Movement Speed for 3 seconds"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Experienced EMT",
+    "image": "/images/Experienced EMT.png",
+    "effects": [
+      {
+        "type": "When you use a Medical Accessory, the target gains +20% Maximum Health until the end of the level"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Face Your Fears",
+    "image": "/images/Face Your Fears.png",
+    "effects": [
+      {
+        "type": "Gain 3 Temporary Health whenever you kill a Ridden within 2 meters"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Fanny Pack",
+    "image": "/images/Fanny Pack.png",
+    "effects": [
+      {
+        "type": "Support Inventory",
+        "amount": 1,
+        "isPercentage": false,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Field Surgeon",
+    "image": "/images/Field Surgeon.png",
+    "effects": [
+      {
+        "type": "Healing Efficiency",
+        "amount": 60,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Use Speed",
+        "amount": -50,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Fire in the Hole!",
+    "image": "/images/Fire in the Hole!.png",
+    "effects": [
+      {
+        "type": "When you throw an Offensive Accessory, Gain 20 Temporary Health and 20% Move speed for 5 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Fleet of Foot",
+    "image": "/images/Fleet of Foot.png",
+    "effects": [
+      {
+        "type": "Move Speed",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage Resistance",
+        "amount": -5,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Fresh Bandage",
+    "image": "/images/Fresh Bandage.png",
+    "effects": [
+      {
+        "type": "Heal 10 Trauma Damage at the start of each level"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Front Sight Focus",
+    "image": "/images/Front Sight Focus.png",
+    "effects": [
+      {
+        "type": "Accuracy",
+        "amount": 20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Glass Cannon",
+    "image": "/images/Glass Cannon.png",
+    "effects": [
+      {
+        "type": "Damage",
+        "amount": 25,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Health",
+        "amount": 30,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Grenade Pouch",
+    "image": "/images/Grenade Pouch.png",
+    "effects": [
+      {
+        "type": "Offensive Inventory",
+        "amount": 1,
+        "isPercentage": false,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Grenade Training",
+    "image": "/images/Grenade Training.png",
+    "effects": [
+      {
+        "type": "Accessory Damage",
+        "amount": 25,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Group Therapy",
+    "image": "/images/Group Therapy.png",
+    "effects": [
+      {
+        "type": "When you use a Medical Accessory, all teammates heal for 5 Health"
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Guns Out",
+    "image": "/images/Guns Out.png",
+    "effects": [
+      {
+        "type": "Weapon Swap Speed",
+        "amount": 50,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage Resistance",
+        "amount": -5,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Hazard Pay",
+    "image": "/images/Hazard Pay.png",
+    "effects": [
+      {
+        "type": "Gain 250 Bonus Copper at the start of Each level"
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Headband Magnifier",
+    "image": "/images/Headband Magnifier.png",
+    "effects": [
+      {
+        "type": "Use Speed",
+        "amount": 125,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "When you take Damage, you have a change to be Blinded for 1 Second"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Heavy Attack",
+    "image": "/images/Heavy Attack.png",
+    "effects": [
+      {
+        "type": "Charge: Hold [LEFTCLICK/R2/RT] with Melee weapon to burst forward. Charge attacks deal 100% increased damage"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Heavy Hitter",
+    "image": "/images/Heavy Hitter.png",
+    "effects": [
+      {
+        "type": "Melee hits against Weakspots deal +20 Additional Stumble Damage"
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Hellfire",
+    "image": "/images/Hellfire.png",
+    "effects": [
+      {
+        "type": "Movement Speed while firing",
+        "amount": 45,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Move Speed while not firing",
+        "amount": 5,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Hi Vis Sights",
+    "image": "/images/Hi Vis Sights.png",
+    "effects": [
+      {
+        "type": "Aim Speed",
+        "amount": 30,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Highwayman",
+    "image": "/images/Highwayman.png",
+    "effects": [
+      {
+        "type": "Pistol Kills have a 2% Chance to Spawn Ammo"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Hunker Down",
+    "image": "/images/Hunker Down.png",
+    "effects": [
+      {
+        "type": "When Crouching, gain 10% Damage Resistance and 40% Accuracy"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Hydration Pack",
+    "image": "/images/Hydration Pack.png",
+    "effects": [
+      {
+        "type": "Health",
+        "amount": 25,
+        "isPercentage": false,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Ammo Capacity",
+        "amount": -15,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Hyper-Focused",
+    "image": "/images/Hyper-Focused.png",
+    "effects": [
+      {
+        "type": "Weakspot Damage",
+        "amount": 50,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "ADS Move Speed",
+        "amount": -75,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Ignore the Pain",
+    "image": "/images/Ignore the Pain.png",
+    "effects": [
+      {
+        "type": "Melee Damage against Mutations",
+        "amount": 20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "When you deal Melee damage to a Mutation gain 1 Temporary Health and recover 3 Stamina"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Improvised Explosives",
+    "image": "/images/Improvised Explosives.png",
+    "effects": [
+      {
+        "type": "Accessory Damage",
+        "amount": 75,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Swap Speed",
+        "amount": -25,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "In the Zone",
+    "image": "/images/In the Zone.png",
+    "effects": [
+      {
+        "type": "Precision Kills grant 5% Reload Speed for 5 Seconds (stacking up to 10 times)"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Inspiring Sacrifice",
+    "image": "/images/Inspiring Sacrifice.png",
+    "effects": [
+      {
+        "type": "When you or a teammate becomes incapacitated, All teammates heal for 25 Health over 20 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Killer's Instinct",
+    "image": "/images/Killer's Instinct.png",
+    "effects": [
+      {
+        "type": "Weakspot Damage",
+        "amount": 30,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "DISABLES: Aim Down Sights"
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Knowledge is Power",
+    "image": "/images/Knowledge is Power.png",
+    "effects": [
+      {
+        "type": "Weakspot Damage",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Allows Player to see values for damage they deal and enemy health bars"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Large Caliber Rounds",
+    "image": "/images/Large Caliber Rounds.png",
+    "effects": [
+      {
+        "type": "Bullet Damage",
+        "amount": 7.5,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Bullet Penetration",
+        "amount": 100,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Stamina Efficiency",
+        "amount": -20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Life Insurance",
+    "image": "/images/Life Insurance.png",
+    "effects": [
+      {
+        "type": "Extra Life",
+        "amount": 2,
+        "isPercentage": false,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Lose 50 Copper at the start of each level",
+        "isPercentage": false,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Line 'em Up",
+    "image": "/images/Line 'em Up.png",
+    "effects": [
+      {
+        "type": "Bullet Penetration with Assault Rifles",
+        "amount": 100,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Lucky Pennies",
+    "image": "/images/Lucky Pennies.png",
+    "effects": [
+      {
+        "type": "Whenever your team loots Copper, you have a 35% chance to find 35% additional Copper"
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Mad Dash",
+    "image": "/images/Mad Dash.png",
+    "effects": [
+      {
+        "type": "Sprint Speed",
+        "amount": 20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Stamina Efficiency",
+        "amount": -30,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Mag Carrier",
+    "image": "/images/Mag Carrier.png",
+    "effects": [
+      {
+        "type": "Pistol Ammo Capacity",
+        "amount": 30,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "SMG Ammo Capacity",
+        "amount": 30,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage with Pistols",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage with SMGs",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Mag Coupler",
+    "image": "/images/Mag Coupler.png",
+    "effects": [
+      {
+        "type": "Reload Speed",
+        "amount": 50,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "DISABLES: Aim Down Sights"
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Mandatory PT",
+    "image": "/images/Mandatory PT.png",
+    "effects": [
+      {
+        "type": "Team Stamina",
+        "amount": 15,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Marathon Runner",
+    "image": "/images/Marathon Runner.png",
+    "effects": [
+      {
+        "type": "No Movement Penalty for Strafe or Backpedal"
+      },
+      {
+        "type": "DISABLES: Sprint"
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Marked for Death",
+    "image": "/images/Marked for Death.png",
+    "effects": [
+      {
+        "type": "Mutations you Ping are highlighted and your team deals 10% increased damage to highlighted enemies"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Mean Drunk",
+    "image": "/images/Mean Drunk.png",
+    "effects": [
+      {
+        "type": "Melee Damage",
+        "amount": 75,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Your Melee Attacks cause cleave through enemies dealing damage in a large area"
+      },
+      {
+        "type": "DISABLES: Sprint"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Meat Grinder",
+    "image": "/images/Meat Grinder.png",
+    "effects": [
+      {
+        "type": "Gain 30% Move Speed and Accuracy while crouched and using an LMG"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Medical Expert",
+    "image": "/images/Medical Expert.png",
+    "effects": [
+      {
+        "type": "+15% Healing Efficiency, When you use a Medical Accessory you gain 15% Movement Speed for 15 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Medical Professional",
+    "image": "/images/Medical Professional.png",
+    "effects": [
+      {
+        "type": "First Aid and Defibrillators also recover 15 Trauma Damage and 1 Extra Life"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Meth Head",
+    "image": "/images/Meth Head.png",
+    "effects": [
+      {
+        "type": "Melee Attack Speed",
+        "amount": 40,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Melee Attack Efficiency",
+        "amount": 40,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Your Melee Attacks no longer stick in tough enemies"
+      },
+      {
+        "type": "DISABLES: Aim Down Sights"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Miraculous Recovery",
+    "image": "/images/Miraculous Recovery.png",
+    "effects": [
+      {
+        "type": "When you use a Medical Accessory, it has a 25% chance to have 100% increased effect"
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Money Grubbers",
+    "image": "/images/Money Grubbers.png",
+    "effects": [
+      {
+        "type": "Each time your team loots Copper, you can gain 5 additional Copper, stacking up to 100 additional Copper"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Motorcycle Helmet",
+    "image": "/images/Motorcycle Helmet.png",
+    "effects": [
+      {
+        "type": "Damage Resistance",
+        "amount": 15,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Health",
+        "amount": 10,
+        "isPercentage": false,
+        "appliesToTeam": false
+      },
+      {
+        "type": "DISABLES: Aim Down Sights"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Motorcycle Jacket",
+    "image": "/images/Motorcycle Jacket.png",
+    "effects": [
+      {
+        "type": "Damage Resistance",
+        "amount": 5,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Health",
+        "amount": 5,
+        "isPercentage": false,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Mugger",
+    "image": "/images/Mugger.png",
+    "effects": [
+      {
+        "type": "Melee Kills have a 2% Chance to spawn ammo."
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Multitool",
+    "image": "/images/Multitool.png",
+    "effects": [
+      {
+        "type": "Use Speed",
+        "amount": 75,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage Resistance",
+        "amount": -5,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Natural Sprinter",
+    "image": "/images/Natural Sprinter.png",
+    "effects": [
+      {
+        "type": "Stamina Regeneration",
+        "amount": 100,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Maximum Stamina",
+        "amount": -50,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Needs of the Many",
+    "image": "/images/Needs of the Many.png",
+    "effects": [
+      {
+        "type": "Health",
+        "amount": -20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Team Extra Life",
+        "amount": 1,
+        "isPercentage": false
+      }
+    ]
+  },
+  {
+    "type": "Defense ",
+    "title": "Numb",
+    "image": "/images/Numb.png",
+    "effects": [
+      {
+        "type": "Gain +15% Damage Resistance while you have Temporary Health"
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Offensive Scavenger",
+    "image": "/images/Offensive Scavenger.png",
+    "effects": [
+      {
+        "type": "You can sense nearby Offensive Accessories"
+      },
+      {
+        "type": "More Offensive Accessories spawn"
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Olympic Sprinter",
+    "image": "/images/Olympic Sprinter.png",
+    "effects": [
+      {
+        "type": "Sprint Efficiency",
+        "amount": 30,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage Resistance",
+        "amount": -5,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "On your Mark...",
+    "image": "/images/On your Mark....png",
+    "effects": [
+      {
+        "type": "When you exit a starting saferoom your team gains +15% Movement Speed for 30 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Optics Enthusiast",
+    "image": "/images/Optics Enthusiast.png",
+    "effects": [
+      {
+        "type": "Accuracy",
+        "amount": 30,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Stamina Efficiency",
+        "amount": -20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Overwatch",
+    "image": "/images/Overwatch.png",
+    "effects": [
+      {
+        "type": "Kills from greater than 15 meters grant 5 Temporary Health to teammates within 10 meters of the target"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Padded Suit",
+    "image": "/images/Padded Suit.png",
+    "effects": [
+      {
+        "type": "Damage Resistance",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Health",
+        "amount": 5,
+        "isPercentage": false,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Stamina Efficiency",
+        "amount": -20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Patient Hunter",
+    "image": "/images/Patient Hunter.png",
+    "effects": [
+      {
+        "type": "Each second you Aim Down Sights increases your Damage by 10% (up to 3 stacks)"
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Pep in your Step",
+    "image": "/images/Pep in your Step.png",
+    "effects": [
+      {
+        "type": "Precision Kills grant you 10% Movement Speed for 5 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Pep Talk",
+    "image": "/images/Pep Talk.png",
+    "effects": [
+      {
+        "type": "Revive SPeed",
+        "amount": 150,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage Resistance",
+        "amount": -5,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Poultice",
+    "image": "/images/Poultice.png",
+    "effects": [
+      {
+        "type": "When you heal a teammate, they heal for an additional 15 Health over 30seconds"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Power Reload",
+    "image": "/images/Power Reload.png",
+    "effects": [
+      {
+        "type": "Reloading a gun within 0.75 Seconds of reaching low ammo will increase its magazine size by 30% until the next reload"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Power Swap",
+    "image": "/images/Power Swap.png",
+    "effects": [
+      {
+        "type": "Changing Weapons within 0.75 Seconds of reaching low ammo grants +20% Damage for 5 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Pyro",
+    "image": "/images/Pyro.png",
+    "effects": [
+      {
+        "type": "Fire Damage",
+        "amount": 100,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Kills with fire grant you 3 Temporary Health. You can sense flammable objects nearby"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Quick Kill",
+    "image": "/images/Quick Kill.png",
+    "effects": [
+      {
+        "type": "Accuracy",
+        "amount": 50,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "DISABLES: Aim Down Sights"
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Reckless",
+    "image": "/images/Reckless.png",
+    "effects": [
+      {
+        "type": "Sprint Efficiency",
+        "amount": 40,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "When you take Damage while Sprinting you lose all Stamina"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Reckless Strategy",
+    "image": "/images/Reckless Strategy.png",
+    "effects": [
+      {
+        "type": "Weakspot Damage",
+        "amount": 30,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage Resistance",
+        "amount": -5,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Reload Drills",
+    "image": "/images/Reload Drills.png",
+    "effects": [
+      {
+        "type": "Reload Speed",
+        "amount": 20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Rhythmic Breathing",
+    "image": "/images/Rhythmic Breathing.png",
+    "effects": [
+      {
+        "type": "Stamina",
+        "amount": 60,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Slow Resistance",
+        "amount": -20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Ridden Slayer",
+    "image": "/images/Ridden Slayer.png",
+    "effects": [
+      {
+        "type": "Weakspot Damage",
+        "amount": 20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Rolling Thunder",
+    "image": "/images/Rolling Thunder.png",
+    "effects": [
+      {
+        "type": "Movement Speed while firing with Shotguns",
+        "amount": 35,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage with shotguns",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Rousing Speech",
+    "image": "/images/Rousing Speech.png",
+    "effects": [
+      {
+        "type": "Revive Speed",
+        "amount": 225,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Team Reduced Incap Trauma",
+        "amount": 20,
+        "isPercentage": true
+      },
+      {
+        "type": "DISABLES: Offensive Accessories"
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Run and Gun",
+    "image": "/images/Run and Gun.png",
+    "effects": [
+      {
+        "type": "You can sprint while shooting"
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Run like Hell",
+    "image": "/images/Run like Hell.png",
+    "effects": [
+      {
+        "type": "Move Speed",
+        "amount": 15,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "When you take Damage, your Accuracy is reduced by 20% for 3 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Sadistic",
+    "image": "/images/Sadistic.png",
+    "effects": [
+      {
+        "type": "Gain 5% Weakspot Damage for Each Precision Kill in the last 10 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Saferoom Recovery",
+    "image": "/images/Saferoom Recovery.png",
+    "effects": [
+      {
+        "type": "Your team heals 5 Trauma Damage and refills 10% Ammo at the start of each level."
+      }
+    ]
+  },
+  {
+    "type": "Defense ",
+    "title": "Scar Tissue",
+    "image": "/images/Scar Tissue.png",
+    "effects": [
+      {
+        "type": "Take 1 less damage from all Ridden."
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Scattergun Skills",
+    "image": "/images/Scattergun Skills.png",
+    "effects": [
+      {
+        "type": "Reload Speed with Shotguns",
+        "amount": 40,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Screwdriver",
+    "image": "/images/Screwdriver.png",
+    "effects": [
+      {
+        "type": "Use Speed",
+        "amount": 50,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Stamina",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Second Chance",
+    "image": "/images/Second Chance.png",
+    "effects": [
+      {
+        "type": "Extra Life",
+        "amount": 1,
+        "isPercentage": false,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Health",
+        "amount": 5,
+        "isPercentage": false,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Share the Wealth",
+    "image": "/images/Share the Wealth.png",
+    "effects": [
+      {
+        "type": "Each teammate gets 100 Bonus Copper at the start of each level"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Shell Carrier",
+    "image": "/images/Shell Carrier.png",
+    "effects": [
+      {
+        "type": "Shotgun Ammo Capacity",
+        "amount": 30,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage with Shotguns",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Shooting Gloves",
+    "image": "/images/Shooting Gloves.png",
+    "effects": [
+      {
+        "type": "Weapon Swap Speed",
+        "amount": 25,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Shoulder Bag",
+    "image": "/images/Shoulder Bag.png",
+    "effects": [
+      {
+        "type": "Support Inventory",
+        "amount": 2,
+        "isPercentage": false,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage",
+        "amount": -10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Shredder",
+    "image": "/images/Shredder.png",
+    "effects": [
+      {
+        "type": "Each bullet hit causes the target to take 1% increased damage for 3 Seconds (Stacks up to 15%)"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Silver Bullets",
+    "image": "/images/Silver Bullets.png",
+    "effects": [
+      {
+        "type": "Bullet Damage",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Bullet Penetration",
+        "amount": 150,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "When you kill a Mutation, you lose 5 Copper"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Slugger",
+    "image": "/images/Slugger.png",
+    "effects": [
+      {
+        "type": "Health",
+        "amount": 5,
+        "isPercentage": false,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Melee Stamina Efficiency",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Melee Attack Speed",
+        "amount": 20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Smelling Salts",
+    "image": "/images/Smelling Salts.png",
+    "effects": [
+      {
+        "type": "Revive Speed",
+        "amount": 100,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Speed Demon",
+    "image": "/images/Speed Demon.png",
+    "effects": [
+      {
+        "type": "Movement Speed while using an SMG",
+        "amount": 6,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Reload Speed while using an SMG",
+        "amount": 35,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Spiky Bits",
+    "image": "/images/Spiky Bits.png",
+    "effects": [
+      {
+        "type": "Melee Damage",
+        "amount": 25,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage Resistance while using a Melee weapon",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Ammo Capacity",
+        "amount": -15,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Steady Aim",
+    "image": "/images/Steady Aim.png",
+    "effects": [
+      {
+        "type": "Aim Speed",
+        "amount": 80,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "ADS Move Speed",
+        "amount": -50,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Stimulants",
+    "image": "/images/Stimulants.png",
+    "effects": [
+      {
+        "type": "Pain Meds you apply also grant +10% Move Speed, +10% Reload Speed, and +10% Weapon Swap Speed for 30 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Stock Pouch",
+    "image": "/images/Stock Pouch.png",
+    "effects": [
+      {
+        "type": "Sniper Ammo Capacity",
+        "amount": 30,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage with Sniper Rifles",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Sunder",
+    "image": "/images/Sunder.png",
+    "effects": [
+      {
+        "type": "Melee hits cause the target to take 20% Increased damage for 5 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Mobility",
+    "title": "Superior Cardio",
+    "image": "/images/Superior Cardio.png",
+    "effects": [
+      {
+        "type": "Stamina",
+        "amount": 20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Sprint Efficiency",
+        "amount": 20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Health",
+        "amount": 5,
+        "isPercentage": false,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Support Scavenger",
+    "image": "/images/Support Scavenger.png",
+    "effects": [
+      {
+        "type": "You can sense nearby Support Accessories. More Support Accessories Spawn"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Surplus Pouches",
+    "image": "/images/Surplus Pouches.png",
+    "effects": [
+      {
+        "type": "Health",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Team Offensive Accessory",
+        "amount": 1,
+        "isPercentage": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Tactical Vest",
+    "image": "/images/Tactical Vest.png",
+    "effects": [
+      {
+        "type": "Rifle Ammo Capacity",
+        "amount": 30,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage with Assault Rifles",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage with LMGs",
+        "amount": 10,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Trigger Control",
+    "image": "/images/Trigger Control.png",
+    "effects": [
+      {
+        "type": "Accuracy with Assault Rifles",
+        "amount": 25,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Accuracy with Sniper Rifles",
+        "amount": 25,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "True Grit",
+    "image": "/images/True Grit.png",
+    "effects": [
+      {
+        "type": "When you take a single hit for 15 or more damage, heal 8 Health over 5 Seconds"
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Tunnel Vision",
+    "image": "/images/Tunnel Vision.png",
+    "effects": [
+      {
+        "type": "Aim Speed",
+        "amount": 50,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage Resistance",
+        "amount": -5,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Two is One and One is None",
+    "image": "/images/Two is One and One is None.png",
+    "effects": [
+      {
+        "type": "You can equip a Primary weapon in your Secondary slot"
+      },
+      {
+        "type": "Swap Speed",
+        "amount": -25,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility",
+    "title": "Utility Scavenger",
+    "image": "/images/Utility Scavenger.png",
+    "effects": [
+      {
+        "type": "You can sense nearby Quick Accessories. More Quick Accessories spawn"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Vanguard",
+    "image": "/images/Vanguard.png",
+    "effects": [
+      {
+        "type": "Melee kills grant 1 Temporary Health to you and nearby teammates."
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Vitamins",
+    "image": "/images/Vitamins.png",
+    "effects": [
+      {
+        "type": "Health",
+        "amount": 15,
+        "isPercentage": false,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Utility ",
+    "title": "Weapon Scavenger",
+    "image": "/images/Weapon Scavenger.png",
+    "effects": [
+      {
+        "type": "You can sense nearby Weapons. More weapons spawn"
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Well Fed",
+    "image": "/images/Well Fed.png",
+    "effects": [
+      {
+        "type": "Stamina Regeneration",
+        "amount": -20,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Team Health",
+        "amount": 10,
+        "isPercentage": false
+      }
+    ]
+  },
+  {
+    "type": "Offense",
+    "title": "Widemouth Magwell",
+    "image": "/images/Widemouth Magwell.png",
+    "effects": [
+      {
+        "type": "Reload Speed",
+        "amount": 30,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Damage Resistance",
+        "amount": -5,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Wooden Armor",
+    "image": "/images/Wooden Armor.png",
+    "effects": [
+      {
+        "type": "Trauma Resistance",
+        "amount": 40,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Fire Resistance",
+        "amount": -100,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Acid Resistance",
+        "amount": -100,
+        "isPercentage": true,
+        "appliesToTeam": false
+      },
+      {
+        "type": "Explosion Resistance",
+        "amount": -100,
+        "isPercentage": true,
+        "appliesToTeam": false
+      }
+    ]
+  },
+  {
+    "type": "Defense",
+    "title": "Wounded Animal",
+    "image": "/images/Wounded Animal.png",
+    "effects": [
+      {
+        "type": "Kills while at Critical Health recover 1 Health"
+      }
+    ]
+  }
+]
