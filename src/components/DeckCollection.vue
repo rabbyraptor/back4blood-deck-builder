@@ -61,23 +61,19 @@
           :key="card.id"
           :style="getBackgroundImage(card.image)"
         >
-          <h3 class="card__title">
+          <h4 class="card__title card__effect">
             {{ card.title }}
-          </h3>
-          <p class="card__type">Type: {{ card.type }}</p>
+          </h4>
+          <p class="card__type card__effect">Type: {{ card.type }}</p>
           <p class="card__effect">
             {{ card.effect }}
           </p>
           <p
-            class="card__effects"
-            v-show="false"
+            class="card__effect"
             v-for="(effect, index) in card.effects"
             :key="effect.type + index"
           >
             {{ effect.type }}
-            {{ effect.amount }}
-            {{ effect.isPercentage }}
-            {{ effect.appliesToTeam }}
           </p>
         </div>
       </draggable>
@@ -348,19 +344,17 @@ export default {
 }
 
 .card__type {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .card__effect {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 0 7.5% 10% 7.5%;
+  position: relative;
+  color: transparent;
 }
 
 .card__title,
 .card__type,
 .card__effect {
-  opacity: 0;
+  opacity: 1;
 }
 
 .custom-deck-data {
