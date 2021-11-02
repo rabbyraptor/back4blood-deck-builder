@@ -31,11 +31,6 @@
 
 .ghost {
   background: #000;
-  color: #fff !important;
-  display: block;
-  align-items: center;
-  padding-top: 1rem;
-  padding-left: 2.7rem;
 }
 
 .custom-deck .card {
@@ -47,14 +42,13 @@
   background-position: right 24%;
   font-size: 1.2rem;
   font-weight: 600;
-  //border: 1px solid rgba(#e0e0e0, 0.15);
 
   &__fading-overlay {
     display: flex;
-    align-items: center;
-    padding-left: 1rem;
     width: 100%;
     height: 100%;
+    padding-top: 1rem;
+    padding-left: 1rem;
     background-image: linear-gradient(
       to right,
       rgba(#000, 1) 29%,
@@ -62,6 +56,7 @@
       rgba(#000, 0) 50%,
       transparent
     );
+    outline: 1px solid rgba(#fff, 0.1);
   }
 
   &__index {
@@ -108,6 +103,8 @@
 
   &__effect {
     position: relative;
+    padding-left: 2.7rem;
+    padding-top: 1rem;
   }
 
   &__drag-hidden-effect {
