@@ -62,7 +62,6 @@
     width: 215px;
     color: white;
     padding: 10% 7.5%;
-    border: 1px solid crimson;
     border-radius: 5px;
     display: grid;
     grid-auto-rows: max-content;
@@ -70,7 +69,12 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
-    background-color: crimson;
+    // background-color: crimson;
+    border: 3px solid transparent;
+  }
+  .card:hover {
+    border: 3px solid crimson;
+    border-radius: 10px;
   }
 }
 
