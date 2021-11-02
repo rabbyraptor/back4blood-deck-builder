@@ -1,0 +1,30 @@
+.custom-deck-data {
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  background: white;
+  width: 300px;
+  padding: 2rem;
+  font-size: 0.9rem;
+  border-radius: 2px;
+  overflow-y: scroll;
+  max-height: calc(100vh - 10rem);
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle:not(:first-of-type) {
+    margin-top: 2rem;
+  }
+
+  .effect {
+    font-size: 0.8rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
