@@ -3,17 +3,17 @@
     <header>
       <h2>B4B Deck Builder</h2>
     </header>
-    <DeckCollection />
+    <DeckBuilder />
   </div>
 </template>
 
 <script>
-import DeckCollection from "./components/DeckCollection.vue";
+import DeckBuilder from "./pages/deckBuilder/";
 
 export default {
   name: "App",
   components: {
-    DeckCollection,
+    DeckBuilder,
   },
 };
 </script>
