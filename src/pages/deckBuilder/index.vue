@@ -38,10 +38,15 @@
         >
           <div
             class="card"
-            v-for="card in this.customDeck"
+            v-for="(card, index) in this.customDeck"
             :key="card.id"
             :style="getBackgroundImage(card.image)"
-          ></div>
+          >
+            <span>
+              <span class="card__index">{{ index + 1 }}</span
+              ><span class="card__title">{{ card.title }}</span>
+            </span>
+          </div>
         </transition-group>
       </draggable>
     </div>

@@ -1,37 +1,49 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .custom-deck {
   &__title {
     color: white;
     position: fixed;
-    top: 3.5rem;
+    top: 7.5rem;
     left: 5rem;
     width: max-content;
+    font-size: 1.5rem;
   }
 
   &__grid {
     position: fixed;
     display: grid;
-    grid-template-rows: repeat(15, 45px);
+    grid-template-rows: repeat(15, 3.5rem);
     align-items: baseline;
-    gap: 6px;
+    gap: 0.8rem;
     height: 787px;
-    min-width: 190px;
+    min-width: 33rem;
+    top: 10rem;
     left: 5rem;
-    top: 5rem;
+  }
+
+  & .skeleton {
+    .card {
+      background-color: #444;
+    }
   }
 
   .card {
-    background-color: #222;
-    height: 45px;
-    width: 190px;
+    height: 3.5rem;
+    width: 33rem;
     color: white;
+    background-color: black;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 50%;
+    background-position: right 25%;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 1px solid rgba(#e0e0e0, 0.15);
+
+    &__index {
+      margin-right: 1rem;
+    }
   }
 }
 

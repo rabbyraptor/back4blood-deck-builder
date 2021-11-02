@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <h2>B4B Deck Builder</h2>
+      <h3>B4B Deck Builder</h3>
     </header>
     <DeckBuilder />
   </div>
@@ -18,12 +18,23 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
 body {
   background: #000023;
 }
+
 header {
-  margin: 4rem 0 4rem;
+  margin: 4rem 0 1.9rem;
   text-align: center;
   color: white;
   font-size: 3rem;
