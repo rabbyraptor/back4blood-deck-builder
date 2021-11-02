@@ -31,6 +31,7 @@ html {
 
 body {
   background: #000023;
+  user-select: none;
 }
 
 header {
