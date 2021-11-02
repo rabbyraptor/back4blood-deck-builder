@@ -23,27 +23,49 @@
   & .skeleton {
     .card {
       background-color: #444;
+      padding-top: 1rem;
+      padding-left: 1rem;
     }
   }
+}
 
-  .card {
-    height: 3.5rem;
-    width: 33rem;
-    color: white;
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: right 25%;
+.ghost {
+  background: #000;
+  color: #fff !important;
+  display: block;
+  align-items: center;
+  padding-top: 1rem;
+  padding-left: 2.7rem;
+}
+
+.custom-deck .card {
+  height: 3.5rem;
+  width: 33rem;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position: right 24%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  //border: 1px solid rgba(#e0e0e0, 0.15);
+
+  &__fading-overlay {
     display: flex;
     align-items: center;
     padding-left: 1rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border: 1px solid rgba(#e0e0e0, 0.15);
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      to right,
+      rgba(#000, 1) 29%,
+      rgba(#000, 0.9) 35%,
+      rgba(#000, 0) 50%,
+      transparent
+    );
+  }
 
-    &__index {
-      margin-right: 1rem;
-    }
+  &__index {
+    margin-right: 1rem;
   }
 }
 
@@ -71,6 +93,7 @@
     background-position: 50% 50%;
     background-size: contain;
     background-color: crimson;
+    color: transparent;
   }
 }
 
@@ -85,6 +108,9 @@
 
   &__effect {
     position: relative;
+  }
+
+  &__drag-hidden-effect {
     color: transparent;
   }
 }

@@ -2,21 +2,21 @@
   <div class="deck-builder" v-if="!this.loading">
     <div class="custom-deck">
       <div class="custom-deck__grid skeleton">
-        <div class="card">1</div>
-        <div class="card">2</div>
-        <div class="card">3</div>
-        <div class="card">4</div>
-        <div class="card">5</div>
-        <div class="card">6</div>
-        <div class="card">7</div>
-        <div class="card">8</div>
-        <div class="card">9</div>
-        <div class="card">10</div>
-        <div class="card">11</div>
-        <div class="card">12</div>
-        <div class="card">13</div>
-        <div class="card">14</div>
-        <div class="card">15</div>
+        <div class="card">1 &nbsp; Empty</div>
+        <div class="card">2 &nbsp; Empty</div>
+        <div class="card">3 &nbsp; Empty</div>
+        <div class="card">4 &nbsp; Empty</div>
+        <div class="card">5 &nbsp; Empty</div>
+        <div class="card">6 &nbsp; Empty</div>
+        <div class="card">7 &nbsp; Empty</div>
+        <div class="card">8 &nbsp; Empty</div>
+        <div class="card">9 &nbsp; Empty</div>
+        <div class="card">10 &nbsp; Empty</div>
+        <div class="card">11 &nbsp; Empty</div>
+        <div class="card">12 &nbsp; Empty</div>
+        <div class="card">13 &nbsp; Empty</div>
+        <div class="card">14 &nbsp; Empty</div>
+        <div class="card">15 &nbsp; Empty</div>
       </div>
 
       <h4 class="custom-deck__title">
@@ -30,6 +30,7 @@
         @start="drag = true"
         @end="drag = false"
         :animation="200"
+        ghost-class="ghost"
       >
         <transition-group
           type="transition"
@@ -40,12 +41,14 @@
             class="card"
             v-for="(card, index) in this.customDeck"
             :key="card.id"
-            :style="getBackgroundImage(card.image)"
+            :style="getCustomCardBackgroundImage(card.image)"
           >
-            <span>
-              <span class="card__index">{{ index + 1 }}</span
-              ><span class="card__title">{{ card.title }}</span>
-            </span>
+            <div class="card__fading-overlay">
+              <span>
+                <span class="card__index">{{ index + 1 }}</span
+                ><span class="card__title">{{ card.title }}</span>
+              </span>
+            </div>
           </div>
         </transition-group>
       </draggable>
@@ -72,12 +75,14 @@
           <h4 class="card__title card__effect">
             {{ card.title }}
           </h4>
-          <p class="card__type card__effect">Type: {{ card.type }}</p>
-          <p class="card__effect">
+          <p class="card__type card__effect card__drag-hidden-effect">
+            Type: {{ card.type }}
+          </p>
+          <p class="card__effect card__drag-hidden-effect">
             {{ card.effect }}
           </p>
           <p
-            class="card__effect"
+            class="card__effect card__drag-hidden-effect"
             v-for="(effect, index) in card.effects"
             :key="effect.type + index"
           >
@@ -228,6 +233,10 @@ export default {
       this.transformedCardData = transformedCardData;
     },
     getBackgroundImage(image) {
+      if (image) return 'background-image: url("' + image + '")';
+      else return null;
+    },
+    getCustomCardBackgroundImage(image) {
       if (image) return 'background-image: url("' + image + '")';
       else return null;
     },
