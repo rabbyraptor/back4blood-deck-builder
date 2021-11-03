@@ -130,8 +130,8 @@
 }
 
 .dragging-is-disabled {
-  &:active::after {
-    transform: scale(0.5);
+  &:active {
+    transform: scale(1.01);
   }
   &::after {
     content: "- ADDED -";
