@@ -1,7 +1,7 @@
 <template>
-  <div class="custom-deck-data">
-    <h3 class="custom-deck-data__title">Main effects</h3>
+  <div class="custom-deck-data" :class="{ 'is-minimized': isMinimized }">
     <div class="main-data">
+      <h3 class="custom-deck-data__title">Main effects</h3>
       <div
         v-for="(effect, index) in data.effectsArray"
         :key="effect.type + index"
@@ -22,8 +22,8 @@
       </span>
     </div>
 
-    <h3 class="custom-deck-data__title">Secondary effects</h3>
     <div class="secondary-data">
+      <h3 class="custom-deck-data__title">Secondary effects</h3>
       <div
         v-for="(effect, index) in data.effectArray"
         :key="index"
@@ -40,12 +40,40 @@
         None - add cards to see effects.
       </span>
     </div>
+    <button
+      v-if="!isMinimized"
+      class="minimize-deck-data-button"
+      @click="minimize()"
+    >
+      -
+    </button>
+    <button
+      v-if="isMinimized"
+      class="minimize-deck-data-button"
+      @click="
+        isMinimized = !isMinimized;
+        $emit('minimize');
+      "
+    >
+      +
+    </button>
   </div>
 </template>
 
 <script>
 export default {
   props: ["data"],
+  data() {
+    return {
+      isMinimized: false,
+    };
+  },
+  methods: {
+    minimize() {
+      this.isMinimized = !this.isMinimized;
+      this.$emit("minimize");
+    },
+  },
 };
 </script>
 

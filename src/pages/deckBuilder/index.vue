@@ -60,7 +60,7 @@
 
     <!-- DRAGGABLE DIVIDER  -->
 
-    <div class="card-collection">
+    <div class="card-collection" :class="{ 'is-minimized': isMinimized }">
       <div class="card-collection__grid">
         <div
           class="card"
@@ -93,7 +93,10 @@
     </div>
 
     <!-- CUSTOM DECK DATA  -->
-    <CustomDeckData :data="calculatedValues"></CustomDeckData>
+    <CustomDeckData
+      :data="calculatedValues"
+      @minimize="minimize()"
+    ></CustomDeckData>
   </div>
 </template>
 
@@ -117,6 +120,7 @@ export default {
         "https://opensheet.vercel.app/1zURAO8DELx_EN1D8YkuJ8hw_WQ2jY1mcLE4D8ElMYUo/B4B%20Card%20List%20-%20Master",
       cardDataApi: "/franksCards.json",
       calculatedEffects: [],
+      isMinimized: false,
     };
   },
   components: {
@@ -255,6 +259,10 @@ export default {
     getCustomCardBackgroundImage(image) {
       if (image) return 'background-image: url("' + image + '")';
       else return null;
+    },
+    minimize() {
+      console.log("Minimized!");
+      this.isMinimized = !this.isMinimized;
     },
   },
   async beforeMount() {

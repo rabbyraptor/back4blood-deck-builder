@@ -1,8 +1,13 @@
+.deck-builder {
+  height: calc(100% - 5rem);
+  width: 100%;
+}
+
 .custom-deck {
   &__title {
     color: white;
     position: fixed;
-    top: 7.5rem;
+    top: 3.5rem;
     left: 5rem;
     width: max-content;
     font-size: 1.5rem;
@@ -11,17 +16,18 @@
   &__grid {
     position: fixed;
     display: grid;
-    grid-template-rows: repeat(15, 3.5rem);
+    grid-template-rows: repeat(15, 3.3rem);
     align-items: baseline;
-    gap: 0.8rem;
-    min-width: 33rem;
-    top: 10rem;
+    gap: 0.5rem;
+    width: calc(25% - 3rem);
+    top: 5rem;
     left: 5rem;
+    margin-top: 1rem;
   }
 
   .card {
-    height: 3.5rem;
-    width: 33rem;
+    height: 3.3rem;
+    width: 100%;
     color: white;
     background-repeat: no-repeat;
     background-size: 65%;
@@ -60,8 +66,8 @@
 
   .clear-button {
     width: 50%;
-    margin-top: 1rem;
-    padding: 1rem 0.5rem;
+    margin-top: 0.25rem;
+    padding: 0.5rem 0.5rem;
     border: 0;
     cursor: pointer;
   }
@@ -72,19 +78,36 @@
 }
 
 .card-collection {
+  position: absolute;
+  right: 0;
+  top: 6rem;
+  height: auto;
+  overflow-y: scroll;
+  padding: 1rem 4rem 17% 0;
+  margin-top: -2rem;
+  width: calc(55% + 6rem);
+  overflow: auto;
+
+  &.is-minimized {
+    //height: calc(100% - 11rem);
+  }
+
   &__grid {
+    height: 90%;
     display: grid;
-    width: max-content;
-    margin: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: 2rem;
+    padding-left: 3.3rem;
     justify-content: center;
-    grid-template-columns: repeat(4, auto);
-    gap: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
   }
 
   .card {
     aspect-ratio: 2.09/3.17;
-    width: 21.5rem;
     color: white;
+    width: 100%;
     padding: 10% 7.5%;
     border: 0px solid white;
     border-radius: 1rem;
@@ -126,7 +149,7 @@
   }
 
   &__effect {
-    position: relative;
+    position: static;
     padding-left: 2.7rem;
     padding-top: 1rem;
   }
