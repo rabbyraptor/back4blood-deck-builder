@@ -1523,7 +1523,7 @@
     "image": "/images/Pep Talk.png",
     "effects": [
       {
-        "type": "Revive SPeed",
+        "type": "Revive Speed",
         "amount": 150,
         "isPercentage": true,
         "appliesToTeam": false
