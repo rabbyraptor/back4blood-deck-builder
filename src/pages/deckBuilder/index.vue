@@ -17,6 +17,9 @@
         <div class="card">13 &nbsp; Empty</div>
         <div class="card">14 &nbsp; Empty</div>
         <div class="card">15 &nbsp; Empty</div>
+        <button class="clear-button" @click="clearCustomDeck()">
+          Reset
+        </button>
       </div>
 
       <h4 class="custom-deck__title">
@@ -41,7 +44,7 @@
             class="card"
             v-for="(card, index) in this.customDeck"
             :key="card.id"
-            :style="getCustomCardBackgroundImage(card.image)"
+            :style="getBackgroundImage(card.image)"
             @click.prevent="removeCardFromCustomCards(card)"
           >
             <div class="card__fading-overlay">
@@ -58,18 +61,7 @@
     <!-- DRAGGABLE DIVIDER  -->
 
     <div class="card-collection">
-      <div
-        class="card-collection__grid"
-        :list="this.transformedCardData"
-        :group="{
-          name: 'cards',
-          pull: isCustomDeckFull(),
-          put: true,
-        }"
-        @change="removePlaceholder($event)"
-        :sort="false"
-        filter=".dragging-is-disabled"
-      >
+      <div class="card-collection__grid">
         <div
           class="card"
           :class="{
@@ -212,7 +204,7 @@ export default {
   methods: {
     addCardToCustomCards(card) {
       if (
-        this.isCustomDeckFull() == "clone" &&
+        this.isCustomDeckFull() == true &&
         !this.cardExistsInCustomDeck(card)
       ) {
         this.customDeck.push(card);
@@ -233,14 +225,13 @@ export default {
     },
     isCustomDeckFull() {
       if (this.customDeck.length < 15) {
-        return "clone";
+        return true;
       } else {
         return false;
       }
     },
-    removePlaceholder(event) {
-      let indexToRemove = event.added.newIndex;
-      this.transformedCardData.splice(indexToRemove, 1);
+    clearCustomDeck() {
+      this.customDeck = [];
     },
     addDataToCards() {
       let numberOfCards = this.cardData.length;
