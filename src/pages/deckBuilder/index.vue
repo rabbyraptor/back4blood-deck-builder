@@ -223,14 +223,8 @@ export default {
       }
     },
     removePlaceholder(event) {
-      let idToRemove = event.added.element.id;
-      let cardToRemove = this.transformedCardData.find(
-        (el) => el.id == idToRemove
-      );
-      this.transformedCardData.splice(
-        this.transformedCardData.indexOf(cardToRemove),
-        1
-      );
+      let indexToRemove = event.added.newIndex;
+      this.transformedCardData.splice(indexToRemove, 1);
     },
     addDataToCards() {
       let numberOfCards = this.cardData.length;
