@@ -79,20 +79,37 @@
     width: 21.5rem;
     color: white;
     padding: 10% 7.5%;
-    border: 1px solid crimson;
-    border-radius: 5px;
+    border: 0px solid white;
+    border-radius: 1rem;
     display: grid;
     grid-auto-rows: max-content;
     position: relative;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: contain;
-    background-color: crimson;
+    background-size: 100%;
+    background-color: black;
     color: transparent;
+    transition: all 0.1s ease-in-out;
+    filter: brightness(120%);
   }
 }
 
 .card {
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.025);
+    outline: 2px solid white;
+  }
+
+  &.dragging-is-disabled:hover {
+    outline: 2px solid crimson;
+  }
+
+  &:active {
+    transform: scale(1.01);
+  }
+
   &__title {
     margin-bottom: 0.6rem;
   }
@@ -113,7 +130,30 @@
 }
 
 .dragging-is-disabled {
-  opacity: 0.5;
+  &:active::after {
+    transform: scale(0.5);
+  }
+  &::after {
+    content: "- ADDED -";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #e0e0e0;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 1rem;
+    background-color: rgba(#4a4a49, 0.75);
+    text-shadow: #000 2px;
+    transition: all 0.25s;
+  }
+  &:hover::after {
+    content: "- REMOVE -";
+    color: crimson;
+  }
 }
 
 .list-move {
