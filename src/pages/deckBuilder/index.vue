@@ -42,6 +42,7 @@
             v-for="(card, index) in this.customDeck"
             :key="card.id"
             :style="getCustomCardBackgroundImage(card.image)"
+            @click.prevent="removeCardFromCustomCards(card)"
           >
             <div class="card__fading-overlay">
               <span>
@@ -77,6 +78,7 @@
           v-for="(card, index) in this.transformedCardData"
           :key="index + index"
           :style="getBackgroundImage(card.image)"
+          @click.prevent="addCardToCustomCards(card)"
         >
           <h4 class="card__title card__effect">
             {{ card.title }}
@@ -208,6 +210,19 @@ export default {
     },
   },
   methods: {
+    addCardToCustomCards(card) {
+      if (
+        this.isCustomDeckFull() == "clone" &&
+        !this.cardExistsInCustomDeck(card)
+      ) {
+        this.customDeck.push(card);
+      } else if (this.cardExistsInCustomDeck(card)) {
+        this.customDeck.splice(this.customDeck.indexOf(card), 1);
+      }
+    },
+    removeCardFromCustomCards(card) {
+      this.customDeck.splice(this.customDeck.indexOf(card), 1);
+    },
     cardExistsInCustomDeck(card) {
       var customDeck = this.customDeck;
       for (var i = 0; i < customDeck.length; i++) {
