@@ -58,7 +58,7 @@
     <!-- DRAGGABLE DIVIDER  -->
 
     <div class="card-collection">
-      <draggable
+      <div
         class="card-collection__grid"
         :list="this.transformedCardData"
         :group="{
@@ -97,7 +97,7 @@
             {{ effect.type }}
           </p>
         </div>
-      </draggable>
+      </div>
     </div>
 
     <!-- CUSTOM DECK DATA  -->
