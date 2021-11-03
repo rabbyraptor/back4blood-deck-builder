@@ -20,6 +20,37 @@
     left: 5rem;
   }
 
+  .card {
+    height: 3.5rem;
+    width: 33rem;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: right 24%;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    &__fading-overlay {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      padding-top: 1rem;
+      padding-left: 1rem;
+      background-image: linear-gradient(
+        to right,
+        rgba(#000, 1) 29%,
+        rgba(#000, 0.9) 35%,
+        rgba(#000, 0) 50%,
+        transparent
+      );
+      outline: 1px solid rgba(#fff, 0.1);
+    }
+
+    &__index {
+      margin-right: 1rem;
+    }
+  }
+
   & .skeleton {
     .card {
       background-color: #444;
@@ -33,37 +64,6 @@
   background: #000;
 }
 
-.custom-deck .card {
-  height: 3.5rem;
-  width: 33rem;
-  color: white;
-  background-repeat: no-repeat;
-  background-size: 65%;
-  background-position: right 24%;
-  font-size: 1.2rem;
-  font-weight: 600;
-
-  &__fading-overlay {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    background-image: linear-gradient(
-      to right,
-      rgba(#000, 1) 29%,
-      rgba(#000, 0.9) 35%,
-      rgba(#000, 0) 50%,
-      transparent
-    );
-    outline: 1px solid rgba(#fff, 0.1);
-  }
-
-  &__index {
-    margin-right: 1rem;
-  }
-}
-
 .card-collection {
   &__grid {
     display: grid;
@@ -75,8 +75,8 @@
   }
 
   .card {
-    height: 325px;
-    width: 215px;
+    aspect-ratio: 2.09/3.17;
+    width: 21.5rem;
     color: white;
     padding: 10% 7.5%;
     border: 1px solid crimson;
