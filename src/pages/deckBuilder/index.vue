@@ -67,11 +67,12 @@
         }"
         @change="removePlaceholder($event)"
         :sort="false"
+        filter=".dragging-is-disabled"
       >
         <div
           class="card"
           :class="{
-            'dragging-is-disabled': cardExistsInCustomDeck(card.id),
+            'dragging-is-disabled': cardExistsInCustomDeck(card),
           }"
           v-for="(card, index) in this.transformedCardData"
           :key="index + index"
@@ -210,7 +211,7 @@ export default {
     cardExistsInCustomDeck(card) {
       var customDeck = this.customDeck;
       for (var i = 0; i < customDeck.length; i++) {
-        if (customDeck[i].id === card) {
+        if (customDeck[i].id === card.id) {
           return true;
         }
       }
