@@ -60,16 +60,21 @@
       <draggable
         class="card-collection__grid"
         :list="this.transformedCardData"
-        :group="{ name: 'cards', pull: !isCustomDeckFull(), put: true }"
-        :sort="true"
+        :group="{
+          name: 'cards',
+          pull: isCustomDeckFull(),
+          put: true,
+        }"
+        @change="removePlaceholder($event)"
+        :sort="false"
       >
         <div
           class="card"
           :class="{
             'dragging-is-disabled': cardExistsInCustomDeck(card.id),
           }"
-          v-for="card in this.transformedCardData"
-          :key="card.id"
+          v-for="(card, index) in this.transformedCardData"
+          :key="index + index"
           :style="getBackgroundImage(card.image)"
         >
           <h4 class="card__title card__effect">
@@ -84,7 +89,7 @@
           <p
             class="card__effect card__drag-hidden-effect"
             v-for="(effect, index) in card.effects"
-            :key="effect.type + index"
+            :key="index + index"
           >
             {{ effect.type }}
           </p>
@@ -212,10 +217,20 @@ export default {
     },
     isCustomDeckFull() {
       if (this.customDeck.length < 15) {
-        return false;
+        return "clone";
       } else {
-        return true;
+        return false;
       }
+    },
+    removePlaceholder(event) {
+      let idToRemove = event.added.element.id;
+      let cardToRemove = this.transformedCardData.find(
+        (el) => el.id == idToRemove
+      );
+      this.transformedCardData.splice(
+        this.transformedCardData.indexOf(cardToRemove),
+        1
+      );
     },
     addDataToCards() {
       let numberOfCards = this.cardData.length;
