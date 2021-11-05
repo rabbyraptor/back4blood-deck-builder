@@ -342,7 +342,7 @@
     "image": "/images/Cocky.png",
     "effects": [
       {
-        "type": "Weapo Swap Speed",
+        "type": "Weapon Swap Speed",
         "amount": 75,
         "isPercentage": true,
         "appliesToTeam": false
