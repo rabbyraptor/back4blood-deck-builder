@@ -36,7 +36,7 @@ body {
   display: flex;
   height: 100%;
   width: 100%;
-  background: #000023;
+  background: #000;
   background-image: url("/images/b4b_titlescreen_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,17 +46,18 @@ body {
 }
 
 header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 5rem;
   margin: 0;
   padding-right: 6rem;
-  height: 5rem;
   color: white;
   font-size: 1rem;
-  position: absolute;
-  display: flex;
-  flex-grow: 1;
-  width: 100%;
+  z-index: 1;
   align-items: center;
   justify-content: flex-end;
+  background-color: #000;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
