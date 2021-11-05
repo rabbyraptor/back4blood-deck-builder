@@ -1,5 +1,14 @@
 <template>
   <div class="deck-builder" v-if="!this.loading">
+    <div class="search-wrapper">
+      <input
+        type="text"
+        v-model="searchQuery"
+        placeholder="Start typing to search. Press Enter to select input."
+        ref="search"
+      />
+    </div>
+
     <div class="custom-deck">
       <div class="custom-deck__grid skeleton">
         <div class="card">1 &nbsp; Empty</div>
@@ -67,11 +76,11 @@
           :class="{
             'dragging-is-disabled': cardExistsInCustomDeck(card),
           }"
-          v-for="(card, index) in this.transformedCardData"
+          v-for="(card, index) in this.filteredSearchList"
           :key="index + index"
-          :style="getBackgroundImage(card.image)"
           @click.prevent="addCardToCustomCards(card)"
         >
+          <img class="card-image" :src="card.image" :alt="card.title" />
           <h4 class="card__title card__effect">
             {{ card.title }}
           </h4>
@@ -114,6 +123,7 @@ export default {
       cardData: {},
       cardImages: {},
       localImages: {},
+      searchQuery: null,
       loading: true,
       imagePath: "/images/",
       oldApi:
@@ -128,6 +138,40 @@ export default {
     CustomDeckData,
   },
   computed: {
+    filteredSearchList() {
+      let searchQuery = this.searchQuery;
+      let searchResults = [];
+
+      function returnTitle(card) {
+        return card.title.toLowerCase().includes(searchQuery.toLowerCase());
+      }
+
+      function returnType(card) {
+        for (let i = 0; i < card.effects.length; i++)
+          return card.effects[i].type
+            .toLowerCase()
+            .includes(searchQuery.toLowerCase());
+      }
+
+      function returnAmount(card) {
+        for (let i = 0; i < card.effects.length; i++)
+          if (card.effects[i].amount && !card.effects[i].isPercentage) {
+            return card.effects[i].amount.toString().includes(searchQuery);
+          } else if (card.effects[i].amount && card.effects[i].isPercentage) {
+            let percentageString = card.effects[i].amount.toString() + "%";
+            return percentageString.includes(searchQuery);
+          }
+      }
+
+      if (this.searchQuery) {
+        let titleResults = this.transformedCardData.filter((card) => {
+          return returnTitle(card) || returnType(card) || returnAmount(card);
+        });
+
+        searchResults.push(...titleResults);
+        return searchResults;
+      } else return this.transformedCardData;
+    },
     customDeckEffects() {
       let customDeck = this.customDeck;
       let effectsArray = [];
@@ -256,7 +300,7 @@ export default {
       if (image) return 'background-image: url("' + image + '")';
       else return null;
     },
-    getCustomCardBackgroundImage(image) {
+    getImagePath(image) {
       if (image) return 'background-image: url("' + image + '")';
       else return null;
     },
@@ -271,6 +315,18 @@ export default {
     this.cardData = await data.json();
     this.addDataToCards();
     this.loading = false;
+  },
+  created() {
+    window.addEventListener("keydown", (e) => {
+      console.log(e);
+      this.$refs.search.focus();
+      if (e.key == "Enter") {
+        this.$refs.search.select();
+        if (this.filteredSearchList.length === 1) {
+          this.addCardToCustomCards(this.filteredSearchList[0]);
+        }
+      }
+    });
   },
 };
 </script>
