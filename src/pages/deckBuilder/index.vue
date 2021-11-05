@@ -81,22 +81,24 @@
           @click.prevent="addCardToCustomCards(card)"
         >
           <img class="card-image" :src="card.image" :alt="card.title" />
-          <h4 class="card__title card__effect">
-            {{ card.title }}
-          </h4>
-          <p class="card__type card__effect card__drag-hidden-effect">
-            Type: {{ card.type }}
-          </p>
-          <p class="card__effect card__drag-hidden-effect">
-            {{ card.effect }}
-          </p>
-          <p
-            class="card__effect card__drag-hidden-effect"
-            v-for="(effect, index) in card.effects"
-            :key="index + index"
-          >
-            {{ effect.type }}
-          </p>
+          <div class="card-content">
+            <h4 class="card__title card__effect">
+              {{ card.title }}
+            </h4>
+            <p class="card__type card__effect card__drag-hidden-effect">
+              Type: {{ card.type }}
+            </p>
+            <p class="card__effect card__drag-hidden-effect">
+              {{ card.effect }}
+            </p>
+            <p
+              class="card__effect card__drag-hidden-effect"
+              v-for="(effect, index) in card.effects"
+              :key="index + index"
+            >
+              {{ effect.type }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
