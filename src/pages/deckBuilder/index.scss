@@ -3,6 +3,25 @@
   width: 100%;
 }
 
+.search-wrapper {
+  position: fixed;
+  left: 50%;
+  width: 25%;
+  height: 5rem;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  input {
+    width: 100%;
+    height: 3rem;
+    padding: 0.25rem 1rem;
+    margin: 1rem auto;
+    background: #4a4a49;
+    border: none;
+    color: #e0e0e0;
+  }
+}
+
 .custom-deck {
   &__title {
     color: white;
@@ -20,7 +39,7 @@
     align-items: baseline;
     gap: 0.5rem;
     width: calc(25% - 3rem);
-    top: 5rem;
+    top: 7rem;
     left: 5rem;
     margin-top: 1rem;
   }
@@ -54,6 +73,11 @@
     &__index {
       margin-right: 1rem;
     }
+
+    &:hover {
+      outline: 2px solid white;
+      transform: scale(1.025);
+    }
   }
 
   & .skeleton {
@@ -79,48 +103,48 @@
 
 .card-collection {
   position: absolute;
-  right: 0;
-  top: 6rem;
+  right: 2rem;
+  top: calc(7rem + 1rem);
   height: auto;
-  overflow-y: scroll;
-  padding: 1rem 4rem 17% 0;
+  padding: 1rem 0rem 17% 0;
   margin-top: -2rem;
-  width: calc(55% + 6rem);
-  overflow: auto;
+  width: 55%;
 
   &.is-minimized {
     //height: calc(100% - 11rem);
   }
 
   &__grid {
-    height: 90%;
+    height: 100%;
     display: grid;
     width: 100%;
-    margin-left: auto;
-    margin-right: 2rem;
-    padding-left: 3.3rem;
-    justify-content: center;
+    padding: 0 1rem 0 0;
     grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
   }
 
   .card {
-    aspect-ratio: 2.09/3.17;
-    color: white;
-    width: 100%;
-    padding: 10% 7.5%;
-    border: 0px solid white;
-    border-radius: 1rem;
     display: grid;
-    grid-auto-rows: max-content;
+    width: 100%;
     position: relative;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 100%;
+    grid-auto-rows: max-content;
+    aspect-ratio: 2.09/3.17;
+    border: 0;
+    border-radius: 1rem;
     background-color: black;
     color: transparent;
-    transition: all 0.1s ease-in-out;
     filter: brightness(120%);
+
+    .card-image {
+      transition: all 0.1s linear;
+      border-radius: 1rem;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      top: 0;
+      left: 0;
+    }
   }
 }
 
@@ -128,16 +152,25 @@
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.025);
-    outline: 2px solid white;
+    &::after,
+    .card-image {
+      transform: scale(1.02);
+    }
+    .card-image {
+      outline: 2px solid white;
+    }
   }
 
   &.dragging-is-disabled:hover {
-    outline: 2px solid crimson;
+    .card-image {
+      outline: 2px solid crimson;
+    }
   }
 
   &:active {
-    transform: scale(1.01);
+    .card-image {
+      transform: scale(1.01);
+    }
   }
 
   &__title {
@@ -149,7 +182,7 @@
   }
 
   &__effect {
-    position: static;
+    position: absolute;
     padding-left: 2.7rem;
     padding-top: 1rem;
   }
@@ -161,13 +194,17 @@
 
 .dragging-is-disabled {
   &:active {
-    transform: scale(1.01);
+    .card-image {
+      transform: scale(1.01);
+    }
   }
   &::after {
     content: "- ADDED -";
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -177,7 +214,6 @@
     letter-spacing: 1px;
     border-radius: 1rem;
     background-color: rgba(#4a4a49, 0.75);
-    text-shadow: #000 2px;
     transition: all 0.25s;
   }
   &:hover::after {
