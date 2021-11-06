@@ -142,17 +142,15 @@ export default {
   computed: {
     filteredSearchList() {
       let searchQuery = this.searchQuery;
-      let searchResults = [];
 
       function returnTitle(card) {
         return card.title.toLowerCase().includes(searchQuery.toLowerCase());
       }
 
       function returnType(card) {
-        for (let i = 0; i < card.effects.length; i++)
-          return card.effects[i].type
-            .toLowerCase()
-            .includes(searchQuery.toLowerCase());
+        return card.effects.filter((item) => {
+          return item.type.toLowerCase().includes(searchQuery.toLowerCase());
+        }).length;
       }
 
       function returnAmount(card) {
@@ -166,11 +164,10 @@ export default {
       }
 
       if (this.searchQuery) {
-        let titleResults = this.transformedCardData.filter((card) => {
+        let searchResults = this.transformedCardData.filter((card) => {
           return returnTitle(card) || returnType(card) || returnAmount(card);
         });
 
-        searchResults.push(...titleResults);
         return searchResults;
       } else return this.transformedCardData;
     },
