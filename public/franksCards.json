@@ -782,7 +782,7 @@
       },
       {
         "type": "Health",
-        "amount": 30,
+        "amount": -30,
         "isPercentage": true,
         "appliesToTeam": false
       }
@@ -1586,7 +1586,7 @@
     "image": "/images/Poultice.png",
     "effects": [
       {
-        "type": "When you heal a teammate, they heal for an additional 15 Health over 30seconds"
+        "type": "When you heal a teammate, they heal for an additional 15 Health over 30 Seconds"
       }
     ]
   },
@@ -2144,7 +2144,7 @@
     "effects": [
       {
         "type": "Health",
-        "amount": 10,
+        "amount": -10,
         "isPercentage": true,
         "appliesToTeam": false
       },
