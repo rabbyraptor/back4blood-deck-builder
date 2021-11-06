@@ -105,7 +105,7 @@
 
     <!-- CUSTOM DECK DATA  -->
     <CustomDeckData
-      :data="calculatedValues"
+      :data="customDeckData"
       @minimize="minimize()"
     ></CustomDeckData>
   </div>
@@ -119,17 +119,10 @@ export default {
   data() {
     return {
       drag: false,
-      disabled: false,
       customDeck: [],
-      transformedCardData: [],
       cardData: {},
-      cardImages: {},
-      localImages: {},
       searchQuery: null,
       loading: true,
-      imagePath: "/images/",
-      oldApi:
-        "https://opensheet.vercel.app/1zURAO8DELx_EN1D8YkuJ8hw_WQ2jY1mcLE4D8ElMYUo/B4B%20Card%20List%20-%20Master",
       cardDataApi: "/franksCards.json",
       calculatedEffects: [],
       isMinimized: false,
@@ -140,20 +133,21 @@ export default {
     CustomDeckData,
   },
   computed: {
+    // Returns a filtered list of cards, based on the search query.
     filteredSearchList() {
       let searchQuery = this.searchQuery;
 
-      function returnTitle(card) {
+      function findTitle(card) {
         return card.title.toLowerCase().includes(searchQuery.toLowerCase());
       }
 
-      function returnType(card) {
+      function findType(card) {
         return card.effects.filter((item) => {
           return item.type.toLowerCase().includes(searchQuery.toLowerCase());
         }).length;
       }
 
-      function returnAmount(card) {
+      function findAmount(card) {
         for (let i = 0; i < card.effects.length; i++)
           if (card.effects[i].amount && !card.effects[i].isPercentage) {
             return card.effects[i].amount.toString().includes(searchQuery);
@@ -164,87 +158,42 @@ export default {
       }
 
       if (this.searchQuery) {
-        let searchResults = this.transformedCardData.filter((card) => {
-          return returnTitle(card) || returnType(card) || returnAmount(card);
+        let searchResults = this.cardData.filter((card) => {
+          return findTitle(card) || findType(card) || findAmount(card);
         });
-
         return searchResults;
-      } else return this.transformedCardData;
+      } else return this.cardData;
     },
-    customDeckEffects() {
+
+    // Groups single-string effects and calculable effects
+    customDeckData() {
       let customDeck = this.customDeck;
-      let effectsArray = [];
-      let effectArray = [];
+      let mainEffects = [];
+      let secondaryEffects = [];
 
       for (var i = 0; i < customDeck.length; i++) {
         for (var l = 0; l < customDeck[i].effects.length; l++) {
           if (customDeck[i].effects[l].amount != null) {
-            effectsArray.push(customDeck[i].effects[l]);
+            // If the effect has an amount it is calculable: It is a main effect.
+            mainEffects.push(customDeck[i].effects[l]);
           } else {
-            effectArray.push(customDeck[i].effects[l]);
+            // Else it is NOT calulable: It is a secondary effect.
+            secondaryEffects.push(customDeck[i].effects[l]);
           }
         }
       }
 
-      let groupedEffects = function(xs, key) {
-        return xs.reduce(function(rv, x) {
+      // Find matches in effect types and group them
+      let groupedEffects = (xs, key) => {
+        return xs.reduce((rv, x) => {
           (rv[x[key]] = rv[x[key]] || []).push(x);
           return rv;
         }, {});
       };
 
       return {
-        effectsArray: groupedEffects(effectsArray, "type"),
-        effectArray: effectArray,
-      };
-    },
-
-    addedEffectValuesComp() {
-      return this.addedEffectValues();
-    },
-    calculatedValues() {
-      let types = this.customDeckEffects.effectsArray;
-
-      let objectToReturn = [];
-      function p(percentages) {
-        return percentages / 100;
-      }
-
-      for (const type in types) {
-        let numbers = 0;
-        let percentages = 0;
-        let typeName = "";
-
-        if (types[type].length > 0) {
-          for (const effect in types[type]) {
-            typeName = types[type][effect].type;
-
-            if (types[type][effect].isPercentage) {
-              percentages += types[type][effect].amount;
-            } else {
-              numbers += types[type][effect].amount;
-            }
-          }
-
-          if (numbers != 0 || percentages != 0) {
-            if (numbers === 0) {
-              objectToReturn.push({
-                type: typeName,
-                totalAmount: percentages + "%",
-              });
-            } else {
-              objectToReturn.push({
-                type: typeName,
-                totalAmount: numbers * (1 + p(percentages)),
-              });
-            }
-          }
-        }
-      }
-
-      return {
-        effectsArray: objectToReturn,
-        effectArray: this.customDeckEffects.effectArray,
+        mainEffects: this.calculateValues(groupedEffects(mainEffects, "type")),
+        secondaryEffects: secondaryEffects,
       };
     },
   },
@@ -293,18 +242,55 @@ export default {
           id: i,
         });
       }
-      this.transformedCardData = transformedCardData;
+      this.cardData = transformedCardData;
+    },
+    calculateValues(mainEffects) {
+      let groupedEffects = mainEffects;
+      let calculatedMainEffects = [];
+
+      let p = (percentages) => {
+        return percentages / 100;
+      };
+
+      for (const entry in groupedEffects) {
+        let numbers = 0;
+        let percentages = 0;
+        let typeName = "";
+
+        if (groupedEffects[entry].length > 0) {
+          for (const effect in groupedEffects[entry]) {
+            typeName = groupedEffects[entry][effect].type;
+
+            if (groupedEffects[entry][effect].isPercentage) {
+              percentages += groupedEffects[entry][effect].amount;
+            } else {
+              numbers += groupedEffects[entry][effect].amount;
+            }
+          }
+
+          if (numbers != 0 || percentages != 0) {
+            if (numbers === 0) {
+              calculatedMainEffects.push({
+                type: typeName,
+                totalAmount: percentages + "%",
+              });
+            } else {
+              calculatedMainEffects.push({
+                type: typeName,
+                totalAmount: numbers * (1 + p(percentages)),
+              });
+            }
+          }
+        }
+      }
+
+      return calculatedMainEffects;
     },
     getBackgroundImage(image) {
       if (image) return 'background-image: url("' + image + '")';
       else return null;
     },
-    getImagePath(image) {
-      if (image) return 'background-image: url("' + image + '")';
-      else return null;
-    },
     minimize() {
-      console.log("Minimized!");
       this.isMinimized = !this.isMinimized;
     },
   },
@@ -317,13 +303,9 @@ export default {
   },
   created() {
     window.addEventListener("keydown", (e) => {
-      console.log(e);
-      this.$refs.search.focus();
-      if (e.key == "Enter") {
-        this.$refs.search.select();
-        if (this.filteredSearchList.length === 1) {
-          this.addCardToCustomCards(this.filteredSearchList[0]);
-        }
+      if (/^[a-z0-9]$/i.test(e.key)) {
+        // If keyboard input is a letter or a number, focus the input field.
+        this.$refs.search.focus();
       }
     });
   },

@@ -3,7 +3,7 @@
     <div class="main-data">
       <h3 class="custom-deck-data__title">Main effects</h3>
       <div
-        v-for="(effect, index) in data.effectsArray"
+        v-for="(effect, index) in data.mainEffects"
         :key="effect.type + index"
         class="effect data-grid"
       >
@@ -16,7 +16,7 @@
       </div>
       <span
         class="data-grid effect--placeholder"
-        v-if="data.effectsArray.length < 1"
+        v-if="data.mainEffects.length < 1"
       >
         None - add cards to see effects.
       </span>
@@ -25,7 +25,7 @@
     <div class="secondary-data">
       <h3 class="custom-deck-data__title">Secondary effects</h3>
       <div
-        v-for="(effect, index) in data.effectArray"
+        v-for="(effect, index) in data.secondaryEffects"
         :key="index"
         class="effect data-grid"
       >
@@ -35,7 +35,7 @@
       </div>
       <span
         class="data-grid effect--placeholder"
-        v-if="data.effectsArray.length < 1"
+        v-if="data.mainEffects.length < 1"
       >
         None - add cards to see effects.
       </span>
