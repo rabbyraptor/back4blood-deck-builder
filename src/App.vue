@@ -2,14 +2,13 @@
   <div id="app">
     <header>
       <h3>B4B Deck Builder v1.0</h3>
-      <a href="https://ko-fi.com/B0B36WCPF" target="_blank"
+      <a class="kofi-button" href="https://ko-fi.com/B0B36WCPF" target="_blank"
         ><img
-          height="20"
-          class="kofi-button"
-          src="https://cdn.ko-fi.com/cdn/kofi2.png?v=3"
-          border="0"
-          alt="Buy Me a Coffee at ko-fi.com"
-      /></a>
+          src="https://storage.ko-fi.com/cdn/cup-border.png"
+          class="kofiimg"
+          data-rotation="0"
+        />Tip Me</a
+      >
     </header>
     <router-view />
   </div>
@@ -81,9 +80,22 @@ header {
 }
 
 .kofi-button {
-  border: 0px;
+  display: inline-flex;
+  align-items: center;
   height: 2.5rem;
-  margin-top: 0.4rem;
-  margin-left: 2rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  .kofiimg {
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    padding-bottom: 0.2rem;
+  }
 }
 </style>
