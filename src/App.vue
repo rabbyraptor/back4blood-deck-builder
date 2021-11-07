@@ -6,8 +6,7 @@
         ><img
           src="https://storage.ko-fi.com/cdn/cup-border.png"
           class="kofiimg"
-          data-rotation="0"
-        />Tip Me</a
+        />Donate</a
       >
     </header>
     <router-view />
@@ -87,6 +86,7 @@ header {
   font-size: 1.2rem;
   color: #fff;
   text-decoration: none;
+  filter: brightness(69%);
 
   &:hover {
     text-decoration: underline;
