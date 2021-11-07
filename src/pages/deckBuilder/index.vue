@@ -248,6 +248,7 @@ export default {
     },
     clearCustomDeck() {
       this.customDeck = [];
+      this.$router.push("/");
     },
     addDataToCards() {
       let numberOfCards = this.cardData.length;
