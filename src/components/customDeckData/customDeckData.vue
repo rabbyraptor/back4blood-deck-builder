@@ -10,7 +10,9 @@
         <span style="font-weight: bold">
           {{ effect.type }}
         </span>
-        <span>
+        <span
+          :class="{ 'negative-number': isNegativeNumber(effect.totalAmount) }"
+        >
           {{ effect.totalAmount }}
         </span>
       </div>
@@ -69,6 +71,12 @@ export default {
     };
   },
   methods: {
+    isNegativeNumber(n) {
+      if (n.charAt(0) == "-") {
+        console.log("Is minus");
+        return true;
+      }
+    },
     minimize() {
       this.isMinimized = !this.isMinimized;
       this.$emit("minimize");
