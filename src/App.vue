@@ -10,6 +10,18 @@
 <script>
 export default {
   name: "App",
+  mounted() {
+    if (this.$route.fullPath != "/") {
+      if (this.$route.query.deck) {
+        this.$router.push({
+          path: "/",
+          query: { deck: this.$route.query.deck },
+        });
+      } else {
+        this.$router.push("/");
+      }
+    }
+  },
 };
 </script>
 

@@ -41,6 +41,7 @@
         :list="this.customDeck"
         @start="drag = true"
         @end="drag = false"
+        @change="pushDeckToRouter()"
         :animation="200"
         ghost-class="ghost"
       >
@@ -126,6 +127,8 @@ export default {
       cardDataApi: "/franksCards.json",
       calculatedEffects: [],
       isMinimized: false,
+      importedDeck: [],
+      cardsToImport: [],
     };
   },
   components: {
@@ -199,14 +202,31 @@ export default {
   },
   methods: {
     addCardToCustomCards(card) {
-      if (
-        this.isCustomDeckFull() == true &&
-        !this.cardExistsInCustomDeck(card)
-      ) {
-        this.customDeck.push(card);
-      } else if (this.cardExistsInCustomDeck(card)) {
-        this.customDeck.splice(this.customDeck.indexOf(card), 1);
+      if (this.cardData.find((item) => item == card)) {
+        if (
+          this.isCustomDeckNotFull() == true &&
+          !this.cardExistsInCustomDeck(card)
+        ) {
+          this.customDeck.push(card);
+          this.pushDeckToRouter();
+        } else if (this.cardExistsInCustomDeck(card)) {
+          this.customDeck.splice(this.customDeck.indexOf(card), 1);
+          this.pushDeckToRouter();
+        }
       }
+    },
+    pushDeckToRouter() {
+      let routeIds = "";
+
+      this.customDeck.forEach((card) => {
+        if (this.customDeck.indexOf(card) == 0) {
+          routeIds += card.id.toString();
+        } else {
+          routeIds += "," + card.id.toString();
+        }
+      });
+
+      this.$router.push({ query: { deck: routeIds } });
     },
     removeCardFromCustomCards(card) {
       this.customDeck.splice(this.customDeck.indexOf(card), 1);
@@ -219,7 +239,7 @@ export default {
         }
       }
     },
-    isCustomDeckFull() {
+    isCustomDeckNotFull() {
       if (this.customDeck.length < 15) {
         return true;
       } else {
@@ -293,6 +313,27 @@ export default {
     minimize() {
       this.isMinimized = !this.isMinimized;
     },
+    importDeck() {
+      let deckParams = this.$route.query.deck;
+
+      if (deckParams) {
+        let cardsToImport = deckParams;
+        cardsToImport = cardsToImport.split(",").map(Number);
+        this.cardsToImport = cardsToImport;
+        let arr = [];
+
+        for (let i = 0; i < cardsToImport.length; i++) {
+          this.addCardToCustomCards(
+            this.cardData.find((card) => card.id == cardsToImport[i])
+          );
+          if (arr.length >= 15) {
+            break;
+          }
+        }
+
+        this.importedDeck = arr;
+      }
+    },
   },
   async beforeMount() {
     // Fetch data from api
@@ -300,6 +341,7 @@ export default {
     this.cardData = await data.json();
     this.addDataToCards();
     this.loading = false;
+    this.importDeck();
   },
   created() {
     window.addEventListener("keydown", (e) => {
