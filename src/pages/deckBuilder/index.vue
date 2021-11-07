@@ -269,10 +269,10 @@ export default {
     calculateValues(mainEffects) {
       let groupedEffects = mainEffects;
       let calculatedMainEffects = [];
-
+      /* 
       let p = (percentages) => {
         return percentages / 100;
-      };
+      }; */
 
       for (const entry in groupedEffects) {
         let numbers = 0;
@@ -291,15 +291,40 @@ export default {
           }
 
           if (numbers != 0 || percentages != 0) {
-            if (numbers === 0) {
+            if (typeName == "Health") {
+              if (numbers === 0) {
+                calculatedMainEffects.push({
+                  type: typeName,
+                  totalAmount: this.isPositiveNumber(percentages) + "%",
+                });
+              } else if (percentages === 0) {
+                calculatedMainEffects.push({
+                  type: typeName,
+                  totalAmount: this.isPositiveNumber(numbers),
+                });
+              } else {
+                calculatedMainEffects.push({
+                  type: typeName,
+                  totalAmount:
+                    this.isPositiveNumber(percentages) +
+                    "% (" +
+                    this.isPositiveNumber(numbers) +
+                    ")",
+                });
+              }
+            }
+            // If type is not "Health"
+            else if (numbers === 0) {
               calculatedMainEffects.push({
                 type: typeName,
-                totalAmount: percentages + "%",
+                totalAmount: this.isPositiveNumber(percentages) + "%",
               });
             } else {
               calculatedMainEffects.push({
                 type: typeName,
-                totalAmount: numbers * (1 + p(percentages)),
+                totalAmount: this.isPositiveNumber(
+                  numbers
+                ) /* * (1 + p(percentages))*/,
               });
             }
           }
@@ -314,6 +339,11 @@ export default {
     },
     minimize() {
       this.isMinimized = !this.isMinimized;
+    },
+    isPositiveNumber(n) {
+      if (n > 0) {
+        return "+" + n;
+      } else return n;
     },
     importDeck() {
       let deckParams = this.$route.query.deck;

@@ -1,4 +1,5 @@
 .custom-deck-data {
+  user-select: text;
   position: fixed;
   display: grid;
   width: 100%;
@@ -10,7 +11,7 @@
   font-size: 1.3rem;
   border-radius: 2px;
   background: rgba(#111, 0.99);
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: 41% 1fr;
   box-shadow: #111 0.2rem 1rem 4rem;
   color: #e0e0e0;
   z-index: 10;
@@ -31,6 +32,10 @@
     top: 0;
   }
 
+  .negative-number {
+    color: crimson;
+  }
+
   .data-grid {
     display: grid;
     gap: 1rem;
@@ -46,10 +51,10 @@
     column-gap: 3rem;
 
     .data-grid {
-      grid-template-columns: auto 4.5rem;
+      grid-template-columns: 1fr minmax(5rem, auto);
 
       span:last-of-type {
-        padding-left: 0rem;
+        padding-left: 1rem;
         border-left: 1px solid crimson;
         text-align: right;
       }
