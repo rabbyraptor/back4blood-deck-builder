@@ -230,6 +230,7 @@ export default {
     },
     removeCardFromCustomCards(card) {
       this.customDeck.splice(this.customDeck.indexOf(card), 1);
+      this.pushDeckToRouter();
     },
     cardExistsInCustomDeck(card) {
       var customDeck = this.customDeck;
@@ -260,7 +261,7 @@ export default {
           title: this.cardData[i].title,
           image: this.cardData[i].image,
           effects: this.cardData[i].effects,
-          id: i,
+          id: i + 1,
         });
       }
       this.cardData = transformedCardData;
