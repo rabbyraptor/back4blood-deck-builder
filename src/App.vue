@@ -3,18 +3,13 @@
     <header>
       <h3>B4B Deck Builder</h3>
     </header>
-    <DeckBuilder />
+    <router-view />
   </div>
 </template>
 
 <script>
-import DeckBuilder from "./pages/deckBuilder/";
-
 export default {
   name: "App",
-  components: {
-    DeckBuilder,
-  },
 };
 </script>
 
