@@ -98,4 +98,13 @@ header {
     padding-bottom: 0.2rem;
   }
 }
+
+@media only screen and (max-width: 992px) {
+  header {
+    padding: 0 0.5rem;
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}
 </style>

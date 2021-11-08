@@ -67,7 +67,6 @@
         rgba(#000, 0) 50%,
         transparent
       );
-      outline: 1px solid rgba(#fff, 0.1);
     }
 
     &__index {
@@ -75,7 +74,7 @@
     }
 
     &:hover {
-      outline: 2px solid white;
+      box-shadow: 0 0 0 2px white;
       transform: scale(1.025);
     }
   }
@@ -119,7 +118,7 @@
     display: grid;
     width: 100%;
     padding: 0 1rem 0 0;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     gap: 1rem;
   }
 
@@ -137,7 +136,7 @@
 
     .card-image {
       will-change: transform;
-      transition: transform 0.1s linear;
+      transition: transform 0.1s linear, box-shadow 0.1s linear;
       border-radius: 1rem;
       position: relative;
       width: 100%;
@@ -162,13 +161,7 @@
     }
   }
 
-  &.dragging-is-disabled:hover {
-    .card-image {
-      box-shadow: 0 0 0 2px crimson;
-    }
-  }
-
-  &:active {
+  &.dragging-is-disabled &:active {
     .card-image {
       transform: scale(1.01);
     }
@@ -199,6 +192,11 @@
 }
 
 .dragging-is-disabled {
+  &:hover {
+    .card-image {
+      box-shadow: 0 0 0 2px crimson;
+    }
+  }
   &:active {
     .card-image {
       transform: scale(1.01);
@@ -230,4 +228,96 @@
 
 .list-move {
   transition: transform 0.5s;
+}
+
+// Vertical Tablet / Mobile
+@media only screen and (max-width: 992px) {
+  // CUSTOM DECK
+  .custom-deck {
+    &__title {
+      left: 1rem;
+      font-size: 1.2rem;
+    }
+    &__grid {
+      left: 1rem;
+      top: 6.5rem;
+      width: calc(40% - 3rem);
+      grid-template-rows: repeat(15, 3rem);
+      gap: 0;
+    }
+    .card {
+      height: 2.8rem;
+      overflow: hidden;
+
+      &:hover {
+        box-shadow: none;
+      }
+
+      &__fading-overlay {
+        padding: 0.75rem 0 0 0.75rem;
+      }
+    }
+
+    & .skeleton {
+      .card {
+        padding-top: 0.75rem;
+        padding-left: 0.75rem;
+      }
+    }
+  }
+
+  // CARD COLLECTION
+  .card-collection {
+    position: absolute;
+    right: 0.5rem;
+
+    &__grid {
+      padding: 0 0.5rem 0 0;
+      grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+      gap: 0.5rem;
+    }
+
+    .card {
+      font-size: 1rem;
+    }
+
+    .dragging-is-disabled {
+      &:active {
+        .card-image {
+          transform: none;
+        }
+      }
+      &::after {
+        font-size: 1.3rem;
+      }
+      &:hover::after {
+        content: "- ADDED -";
+        color: white;
+      }
+    }
+  }
+
+  .card {
+    &:hover {
+      &::after,
+      .card-image {
+        transform: none;
+      }
+      .card-image {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .search-wrapper {
+    width: 33%;
+    height: 5rem;
+
+    input {
+      height: 2.5rem;
+      padding: 0.25rem 0.75rem;
+      margin: 1.25rem auto;
+      font-size: 1rem;
+    }
+  }
 }
