@@ -32,7 +32,7 @@
       </div>
 
       <h4 class="custom-deck__title">
-        Custom Deck 1: {{ this.customDeck.length }}/15
+        Custom Deck: {{ this.customDeck.length }} / 15
       </h4>
 
       <draggable
