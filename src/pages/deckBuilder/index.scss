@@ -131,13 +131,13 @@
     grid-auto-rows: max-content;
     //aspect-ratio: 2.09/3.17;
     border: 0;
-    border-radius: 1rem;
     background-color: black;
     color: transparent;
     filter: brightness(120%);
 
     .card-image {
-      transition: all 0.1s linear;
+      will-change: transform;
+      transition: transform 0.1s linear;
       border-radius: 1rem;
       position: relative;
       width: 100%;
@@ -158,13 +158,13 @@
       transform: scale(1.02);
     }
     .card-image {
-      outline: 2px solid white;
+      box-shadow: 0 0 0 2px white;
     }
   }
 
   &.dragging-is-disabled:hover {
     .card-image {
-      outline: 2px solid crimson;
+      box-shadow: 0 0 0 2px crimson;
     }
   }
 
@@ -220,7 +220,7 @@
     letter-spacing: 1px;
     border-radius: 1rem;
     background-color: rgba(#4a4a49, 0.75);
-    transition: all 0.25s;
+    transition: color 0.25s;
   }
   &:hover::after {
     content: "- REMOVE -";
