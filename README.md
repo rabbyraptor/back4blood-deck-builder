@@ -1,4 +1,4 @@
-# back4blood-deck-creator
+# back4blood-deck-builder
 
 ## Project setup
 ```
