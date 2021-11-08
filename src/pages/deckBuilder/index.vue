@@ -102,6 +102,17 @@
           </div>
         </div>
       </div>
+      <p class="disclaimer">
+        Notice of Non-Affiliation and Disclaimer: We are not affiliated,
+        associated, authorized, endorsed by, or in any way officially connected
+        with Back 4 Blood, or any of its subsidiaries or its affiliates. The
+        official Back 4 Blood website can be found at
+        <a href="https://back4blood.com/" target="_blank"
+          >https://back4blood.com/</a
+        >. The Back 4 Blood, Turtle Rock Studios, Warner Bros. as well as
+        related names, marks, emblems and images are registered trademarks of
+        their respective owners. <br /><br />Thank you for using b4bdeck.com!
+      </p>
     </div>
 
     <!-- CUSTOM DECK DATA  -->

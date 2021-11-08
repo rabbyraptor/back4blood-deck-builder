@@ -118,7 +118,7 @@
     display: grid;
     width: 100%;
     padding: 0 1rem 0 0;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     gap: 1rem;
   }
 
@@ -223,6 +223,14 @@
   &:hover::after {
     content: "- REMOVE -";
     color: crimson;
+  }
+}
+
+.disclaimer {
+  margin-top: 2.5rem;
+  color: #555;
+  a {
+    color: inherit;
   }
 }
 
