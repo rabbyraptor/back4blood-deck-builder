@@ -81,7 +81,12 @@
           :key="index + index"
           @click.prevent="addCardToCustomCards(card)"
         >
-          <img class="card-image" :src="card.image" :alt="card.title" />
+          <img
+            class="card-image"
+            :src="card.image"
+            :alt="card.title"
+            loading="lazy"
+          />
           <div class="card-content">
             <h4 class="card__title card__effect">
               {{ card.title }}
