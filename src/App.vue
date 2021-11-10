@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <header>
-      <h3>B4B Deck Builder v1.0</h3>
+      <span class="page-title">
+        <h1>Back 4 Blood Deck Builder</h1>
+        Last updated: Nov. 10, 2021
+      </span>
       <a class="kofi-button" href="https://ko-fi.com/B0B36WCPF" target="_blank"
         ><img
           src="https://storage.ko-fi.com/cdn/cup-border.png"
@@ -58,6 +61,12 @@ body {
   background-attachment: fixed;
 }
 
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 header {
   display: flex;
   position: fixed;
@@ -71,11 +80,15 @@ header {
   align-items: center;
   justify-content: space-between;
   background-color: #000;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  .page-title {
+    font-size: 1rem;
+    color: #e0e0e0;
+
+    h1 {
+      font-size: 1.1rem;
+    }
+  }
 }
 
 .kofi-button {
