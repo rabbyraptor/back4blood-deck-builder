@@ -70,7 +70,6 @@ export default {
   methods: {
     isNegativeNumber(n) {
       if (n.charAt(0) == "-") {
-        console.log("Is minus");
         return true;
       }
     },
