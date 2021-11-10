@@ -52,10 +52,7 @@
     <button
       v-if="isMinimized"
       class="minimize-deck-data-button"
-      @click="
-        isMinimized = !isMinimized;
-        $emit('minimize');
-      "
+      @click="isMinimized = !isMinimized"
     >
       +
     </button>
