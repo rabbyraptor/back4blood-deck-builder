@@ -70,7 +70,7 @@
 
     <!-- DRAGGABLE DIVIDER  -->
 
-    <div class="card-collection" :class="{ 'is-minimized': isMinimized }">
+    <div class="card-collection">
       <div class="card-collection__grid">
         <div
           class="card"
@@ -107,6 +107,12 @@
           </div>
         </div>
       </div>
+      <div
+        v-if="this.filteredSearchList.length < 1"
+        class="empty-search-result"
+      >
+        No matches found.
+      </div>
       <p class="disclaimer">
         Notice of Non-Affiliation and Disclaimer: We are not affiliated,
         associated, authorized, endorsed by, or in any way officially connected
@@ -121,10 +127,7 @@
     </div>
 
     <!-- CUSTOM DECK DATA  -->
-    <CustomDeckData
-      :data="customDeckData"
-      @minimize="minimize()"
-    ></CustomDeckData>
+    <CustomDeckData :data="customDeckData"></CustomDeckData>
   </div>
 </template>
 
@@ -140,7 +143,7 @@ export default {
       cardData: {},
       searchQuery: null,
       loading: true,
-      cardDataApi: "/franksCards.json",
+      cardDataApi: "/cardData.json",
       calculatedEffects: [],
       isMinimized: false,
       importedDeck: [],

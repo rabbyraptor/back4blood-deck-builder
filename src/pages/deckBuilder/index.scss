@@ -109,16 +109,12 @@
   margin-top: -2rem;
   width: 55%;
 
-  &.is-minimized {
-    //height: calc(100% - 11rem);
-  }
-
   &__grid {
     height: 100%;
     display: grid;
     width: 100%;
     padding: 0 1rem 0 0;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 0.25fr));
     gap: 1rem;
   }
 
@@ -226,6 +222,11 @@
   }
 }
 
+.empty-search-result {
+  color: #e0e0e0;
+  font-size: 1.8rem;
+}
+
 .disclaimer {
   margin-top: 2.5rem;
   color: #555;
@@ -281,7 +282,7 @@
 
     &__grid {
       padding: 0 0.5rem 0 0;
-      grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(9rem, 0.45fr));
       gap: 0.5rem;
     }
 
