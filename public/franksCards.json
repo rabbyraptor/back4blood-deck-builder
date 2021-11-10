@@ -166,7 +166,7 @@
     "effects": [
       {
         "type": "Melee Damage",
-        "amount": 50,
+        "amount": 40,
         "isPercentage": true,
         "appliesToTeam": false
       },
@@ -274,7 +274,7 @@
     "effects": [
       {
         "type": "Melee Stamina Efficiency",
-        "amount": 30,
+        "amount": 20,
         "isPercentage": true,
         "appliesToTeam": false
       },
@@ -318,7 +318,7 @@
     "image": "/images/Buckshot Bruiser.png",
     "effects": [
       {
-        "type": "When using Shotguns, gain Temporary Health for each pellet that hits"
+        "type": "When using Shotguns, gain 0.25 Temporary Health for each pellet that hits"
       }
     ]
   },
@@ -681,7 +681,7 @@
     "image": "/images/Face Your Fears.png",
     "effects": [
       {
-        "type": "Gain 3 Temporary Health whenever you kill a Ridden within 2 meters"
+        "type": "Gain 2 Temporary Health whenever you kill a Ridden within 2 meters"
       }
     ]
   },
@@ -991,7 +991,7 @@
         "appliesToTeam": false
       },
       {
-        "type": "When you deal Melee damage to a Mutation gain 1 Temporary Health and recover 3 Stamina"
+        "type": "When you deal Melee damage to a Mutation heal 1 Health and recover 3 Stamina"
       }
     ]
   },
@@ -1030,7 +1030,7 @@
     "image": "/images/Inspiring Sacrifice.png",
     "effects": [
       {
-        "type": "When you or a teammate becomes incapacitated, All teammates heal for 25 Health over 20 Seconds"
+        "type": "When you or a teammate becomes incapacitated, All teammates heal for 20 Health over 15 Seconds"
       }
     ]
   },
@@ -1241,7 +1241,7 @@
     "effects": [
       {
         "type": "Melee Damage",
-        "amount": 75,
+        "amount": 60,
         "isPercentage": true,
         "appliesToTeam": false
       },
@@ -1295,8 +1295,8 @@
         "appliesToTeam": false
       },
       {
-        "type": "Melee Attack Efficiency",
-        "amount": 40,
+        "type": "Melee Stamina Efficiency",
+        "amount": 30,
         "isPercentage": true,
         "appliesToTeam": false
       },
@@ -1324,7 +1324,7 @@
     "image": "/images/Money Grubbers.png",
     "effects": [
       {
-        "type": "Each time your team loots Copper, you can gain 5 additional Copper, stacking up to 100 additional Copper"
+        "type": "Each time your team loots Copper, you can gain 3 additional Copper, stacking up to 75 additional Copper"
       }
     ]
   },
@@ -2026,7 +2026,7 @@
     "effects": [
       {
         "type": "Melee Damage",
-        "amount": 25,
+        "amount": 20,
         "isPercentage": true,
         "appliesToTeam": false
       },
@@ -2205,7 +2205,7 @@
     "image": "/images/True Grit.png",
     "effects": [
       {
-        "type": "When you take a single hit for 15 or more damage, heal 8 Health over 5 Seconds"
+        "type": "When you take a single hit for 15 or more damage, heal 10 Health over 5 Seconds"
       }
     ]
   },
