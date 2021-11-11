@@ -87,12 +87,26 @@
     }
   }
 
-  .clear-button {
-    width: 50%;
-    margin-top: 0.25rem;
-    padding: 0.5rem 0.5rem;
-    border: 0;
-    cursor: pointer;
+  .custom-deck-buttons {
+    display: flex;
+    gap: 1rem;
+    .clear-deck-button,
+    .copy-deck-button {
+      width: 50%;
+      margin-top: 0.25rem;
+      padding: 0.5rem 0.5rem;
+      border: 0;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(90%);
+      }
+    }
+
+    .clear-deck-button {
+      background-color: crimson;
+      color: white;
+    }
   }
 }
 

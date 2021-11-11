@@ -3,7 +3,7 @@
     <header>
       <span class="page-title">
         <h1>Back 4 Blood Deck Builder</h1>
-        Last updated: Nov. 10, 2021
+        Last updated: Nov. 11, 2021
       </span>
       <a class="kofi-button" href="https://ko-fi.com/B0B36WCPF" target="_blank"
         ><img

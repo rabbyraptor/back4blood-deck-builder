@@ -26,9 +26,14 @@
         <div class="card">13 &nbsp; Empty</div>
         <div class="card">14 &nbsp; Empty</div>
         <div class="card">15 &nbsp; Empty</div>
-        <button class="clear-button" @click="clearCustomDeck()">
-          Reset
-        </button>
+        <div class="custom-deck-buttons">
+          <button class="clear-deck-button" @click="clearCustomDeck()">
+            Reset
+          </button>
+          <button class="copy-deck-button" @click="copyCustomDeck()">
+            {{ this.copyMessage }}
+          </button>
+        </div>
       </div>
 
       <h4 class="custom-deck__title">
@@ -41,7 +46,10 @@
         :list="this.customDeck"
         @start="drag = true"
         @end="drag = false"
-        @change="pushDeckToRouter()"
+        @change="
+          pushDeckToRouter();
+          resetCopyMessage();
+        "
         :animation="200"
         ghost-class="ghost"
       >
@@ -148,6 +156,7 @@ export default {
       isMinimized: false,
       importedDeck: [],
       cardsToImport: [],
+      copyMessage: "Copy to clipboard",
     };
   },
   components: {
@@ -228,9 +237,11 @@ export default {
         ) {
           this.customDeck.push(card);
           this.pushDeckToRouter();
+          this.resetCopyMessage();
         } else if (this.cardExistsInCustomDeck(card)) {
           this.customDeck.splice(this.customDeck.indexOf(card), 1);
           this.pushDeckToRouter();
+          this.resetCopyMessage();
         }
       }
     },
@@ -250,6 +261,7 @@ export default {
     removeCardFromCustomCards(card) {
       this.customDeck.splice(this.customDeck.indexOf(card), 1);
       this.pushDeckToRouter();
+      this.resetCopyMessage();
     },
     cardExistsInCustomDeck(card) {
       var customDeck = this.customDeck;
@@ -269,6 +281,14 @@ export default {
     clearCustomDeck() {
       this.customDeck = [];
       this.$router.push("/");
+      this.resetCopyMessage();
+    },
+    copyCustomDeck() {
+      navigator.clipboard.writeText(window.location.href);
+      this.copyMessage = "Deck copied!";
+    },
+    resetCopyMessage() {
+      this.copyMessage = "Copy to clipboard";
     },
     addDataToCards() {
       let numberOfCards = this.cardData.length;
