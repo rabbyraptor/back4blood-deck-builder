@@ -300,7 +300,7 @@ export default {
 
       const cardNumbers = new Set();
       while(cardNumbers.size !== deckSize) {
-        cardNumbers.add(this.getRandomInt(this.cardData.length - 1));
+        cardNumbers.add(this.getRandomInt(this.cardData.length));
       }
 
       cardNumbers.forEach((cardNumber) => {
