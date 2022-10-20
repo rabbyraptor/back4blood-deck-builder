@@ -33,6 +33,9 @@
           <button class="copy-deck-button" @click="copyCustomDeck()">
             {{ this.copyMessage }}
           </button>
+          <button class="copy-deck-button" @click="randomizeDeck()">
+            Randomize
+          </button>
         </div>
       </div>
 
@@ -286,6 +289,24 @@ export default {
     copyCustomDeck() {
       navigator.clipboard.writeText(window.location.href);
       this.copyMessage = "Deck copied!";
+    },
+    getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    },
+    randomizeDeck() {
+      const deckSize = 15;
+
+      this.customDeck = [];
+
+      const cardNumbers = new Set();
+      while(cardNumbers.size !== deckSize) {
+        cardNumbers.add(this.getRandomInt(this.cardData.length));
+      }
+
+      cardNumbers.forEach((cardNumber) => {
+        const card = this.cardData[cardNumber];
+        this.addCardToCustomCards(card);
+      });
     },
     resetCopyMessage() {
       this.copyMessage = "Copy to clipboard";
