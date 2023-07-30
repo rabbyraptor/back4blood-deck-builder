@@ -14,6 +14,7 @@ Navigate to the publically available app at https://b4bdeck.netlify.app/
 Updated October 2022
   
   <br>
+  ![Image](public/images/b4b-og-img.jpg)
 
 # Development
 ## Project setup
