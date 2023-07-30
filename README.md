@@ -12,7 +12,7 @@ Navigate to the publically available app at https://b4bdeck.netlify.app/
 * Share by clicking on share, or simply by copying the URL.
 <br>
 Updated October 2022
-
+<bv>
 ![image](https://github.com/rabbyraptor/back4blood-deck-builder/assets/55085876/8e9734b8-3626-40c5-8321-dfc98cfb7dac)
 
 <br>
